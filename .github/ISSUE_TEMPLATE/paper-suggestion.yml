@@ -1,0 +1,61 @@
+name: Paper suggestion
+description: Suggest a paper, project, or adjacent system for the list
+title: "[Paper] "
+labels: [paper-suggestion]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Work title
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Paper or project URL
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Official code URL
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Primary topic
+      options:
+        - Code as Policy
+        - Simulation and Task Generation
+        - Automated Reward Design
+        - Automated Robot Evaluation
+        - Synthetic Data Generation for Policy Learning
+        - Agentic Policy Training and Robot Autoresearch
+        - Unsure / cross-topic
+    validations:
+      required: true
+  - type: textarea
+    id: agent_writes
+    attributes:
+      label: What does the coding agent write or change?
+      description: Name the executable artifact, not only the model output.
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: What feedback loop does it use?
+      description: For example compiler errors, simulator traces, reward, training curves, or real-robot outcomes.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What robot-learning evidence is reported?
+      description: Include the simulator or robot setting and the most useful result.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Scope or strictness concerns
+      description: Explain any reason this may be Related rather than Core.

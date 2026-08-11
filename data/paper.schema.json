@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/harooos/awesome-coding-agents-for-robot-learning/blob/main/data/paper.schema.json",
+  "title": "Awesome Coding Agents for Robot Learning entry",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "title",
+      "date",
+      "topics",
+      "classification",
+      "agent_writes",
+      "feedback",
+      "final_artifact",
+      "evaluation",
+      "summary",
+      "links"
+    ],
+    "properties": {
+      "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+      "title": {"type": "string", "minLength": 1},
+      "date": {"type": "string", "pattern": "^[0-9]{4}(-[0-9]{2})?$"},
+      "venue": {"type": "string"},
+      "organization": {"type": "string"},
+      "topics": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "enum": [
+            "code-as-policy",
+            "simulation-task-generation",
+            "reward-design",
+            "robot-evaluation",
+            "synthetic-data",
+            "agentic-policy-training"
+          ]
+        }
+      },
+      "classification": {"enum": ["core", "related"]},
+      "strictness_note": {"type": "string"},
+      "agent_writes": {"type": "string", "minLength": 1},
+      "feedback": {"type": "array", "items": {"type": "string"}},
+      "final_artifact": {"type": "string", "minLength": 1},
+      "evaluation": {"type": "string", "minLength": 1},
+      "summary": {"type": "string", "minLength": 1},
+      "curator_pick": {"type": "boolean", "default": false},
+      "open_source": {"type": "boolean", "default": false},
+      "real_robot": {"type": "boolean", "default": false},
+      "links": {
+        "type": "object",
+        "minProperties": 1,
+        "additionalProperties": false,
+        "properties": {
+          "paper": {"type": "string", "format": "uri"},
+          "code": {"type": "string", "format": "uri"},
+          "project": {"type": "string", "format": "uri"},
+          "dataset": {"type": "string", "format": "uri"},
+          "video": {"type": "string", "format": "uri"}
+        }
+      }
+    }
+  }
+}

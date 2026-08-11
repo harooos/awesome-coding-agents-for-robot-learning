@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this collection in your research, please cite it using the metadata below."
+title: "Awesome Coding Agents for Robot Learning"
+type: dataset
+authors:
+  - family-names: "harooos"
+repository-code: "https://github.com/harooos/awesome-coding-agents-for-robot-learning"
+url: "https://github.com/harooos/awesome-coding-agents-for-robot-learning"
+license: MIT
+abstract: >-
+  A curated research map of coding agents that create, execute, evaluate,
+  and improve robot-learning systems, spanning Code as Policy, simulation
+  and task generation, reward design, robot evaluation, synthetic data,
+  and agentic policy training.
+keywords:
+  - coding agents
+  - robot learning
+  - robotics
+  - code as policy
+  - simulation
+  - reward design
+  - robot evaluation
+  - synthetic data
+  - autonomous research
