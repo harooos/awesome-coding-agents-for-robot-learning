@@ -13,9 +13,11 @@ These are working questions, not claims for the public README.
 
 ## Code as Policy
 
-- Import the existing Feishu research without flattening its internal taxonomy.
-- Separate direct control code, hierarchical programs, graphs, and code-optimized policies.
-- Record runtime safety, recovery, and generalization evidence.
+- First source audit completed on 2026-08-11; see dev/topic-notes/code-as-policy.md.
+- Re-audit deferred boundary cases: GRAPPA, GROOT, Ca2P, RoboClaw, VIA, and other VLA orchestration systems.
+- Recheck official code releases for ASPIRE, RHO, and other entries currently marked closed-source.
+- Continue recording runtime safety boundaries, recovery mechanisms, scaffold dependence, and cross-embodiment evidence.
+- If the full Feishu export becomes available, compare it against the condensed note without flattening its internal taxonomy.
 
 ## Simulation and Task Generation
 

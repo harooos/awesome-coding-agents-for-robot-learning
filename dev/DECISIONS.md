@@ -43,3 +43,27 @@ This file records durable project decisions. New entries should state the date, 
 **Decision:** Do not seed unverified records merely to make the initial page look populated.
 
 **Reason:** The project values traceable, topic-level source audits. Existing discussion notes are leads, not automatically verified entries.
+
+## 2026-08-11 — Define CaP by the deployed external policy artifact
+
+**Decision:** A CaP work belongs in the core section when agent-generated executable structure is on the robot's policy path, whether that structure is a function, program, skill library, computation graph, multi-file repository, or harness around neural and classical controllers.
+
+**Reason:** The stable idea is policy synthesis rather than direct model control. The representation and the agent's role have broadened substantially without changing that artifact-level boundary.
+
+## 2026-08-11 — Include both one-shot and agentic CaP
+
+**Decision:** Original one-shot policy synthesis remains Core. Execution-feedback-driven diagnosis and rewriting are treated as later agentic capabilities, not prerequisites for inclusion.
+
+**Reason:** Requiring a repair loop would incorrectly exclude the foundational Code as Policies work and conflate the research lineage with only its newest stage.
+
+## 2026-08-11 — Route outer-loop robot research away from CaP
+
+**Decision:** Systems that mainly modify rewards, data, training code, or algorithms and ultimately leave behind a learned policy should be curated under Agentic Policy Training or Synthetic Data, not CaP.
+
+**Reason:** Similar coding-agent machinery can produce a different final artifact. ENPIRE and LabVLA are important examples, but they answer different research questions.
+
+## 2026-08-11 — Keep product evidence explicitly Related
+
+**Decision:** Product research posts and documentation may appear as Related when they clearly describe executable CaP systems, but their strictness notes must disclose missing paper-level benchmarks or reproducible releases.
+
+**Reason:** Waddle and Telekinesis help map the emerging deployment landscape without being presented as equivalent to peer-reviewed or reproducible research systems.

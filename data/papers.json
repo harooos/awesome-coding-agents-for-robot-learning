@@ -1,1 +1,630 @@
-[]
+[
+  {
+    "id": "code-as-policies",
+    "title": "Code as Policies: Language Model Programs for Embodied Control",
+    "date": "2022-09",
+    "venue": "ICRA 2023",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Hierarchical Python policies that compose perception, planning, and control APIs.",
+    "feedback": [
+      "Runtime perception consumed by the generated program",
+      "No post-rollout code-repair loop in the original system"
+    ],
+    "final_artifact": "An executable Python policy program.",
+    "evaluation": "Tabletop manipulation, whiteboard drawing, and mobile manipulation across physical robot platforms.",
+    "summary": "The foundational CaP formulation: repurpose a language model's code prior to synthesize inspectable robot policies over a curated API.",
+    "curator_pick": true,
+    "open_source": true,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2209.07753",
+      "code": "https://github.com/google-research/google-research/tree/master/code_as_policies",
+      "project": "https://code-as-policies.github.io/"
+    }
+  },
+  {
+    "id": "promptbook",
+    "title": "How to Prompt Your Robot: A PromptBook for Manipulation Skills with Code as Policies",
+    "date": "2023-10",
+    "venue": "ICRA 2024",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Robot policy code and new low-level manipulation skills under alternative prompt designs.",
+    "feedback": [
+      "State-estimation outputs supplied in the prompt",
+      "Prompt examples and instructions",
+      "No autonomous post-rollout repair loop"
+    ],
+    "final_artifact": "Executable manipulation-skill code.",
+    "evaluation": "Prompt-component ablations and new-skill execution on a mobile manipulator.",
+    "summary": "A systematic study of how examples, instructions, chain-of-thought, and state estimation shape CaP skill generation.",
+    "open_source": false,
+    "real_robot": true,
+    "links": {
+      "paper": "https://doi.org/10.1109/ICRA57147.2024.10610784"
+    }
+  },
+  {
+    "id": "roboscript",
+    "title": "RoboScript: Code Generation for Free-Form Manipulation Tasks across Real and Simulation",
+    "date": "2024-02",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Deployable manipulation code against a unified ROS and Gazebo interface.",
+    "feedback": [
+      "Syntax validation",
+      "Gazebo simulation validation",
+      "Perception and motion-planning outputs"
+    ],
+    "final_artifact": "Robot-executable manipulation code.",
+    "evaluation": "A free-form manipulation benchmark plus end-to-end evaluations on Franka and UR5 embodiments in simulation and reality.",
+    "summary": "Moves CaP from idealized APIs toward deployability by unifying code generation, perception, planning, control, and simulation checks.",
+    "open_source": false,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2402.14623"
+    }
+  },
+  {
+    "id": "robocodex",
+    "title": "RoboCodeX: Multimodal Code Generation for Robotic Behavior Synthesis",
+    "date": "2024-02",
+    "venue": "ICML 2024",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Tree-structured robot code built from object-centric manipulation units with affordance and safety constraints.",
+    "feedback": [
+      "Multimodal scene inputs",
+      "Object affordances and physical constraints",
+      "Iterative self-updating during supervised fine-tuning"
+    ],
+    "final_artifact": "Executable object-centric robot behavior code.",
+    "evaluation": "Four manipulation categories and one navigation task in simulators and on real robots.",
+    "summary": "Uses multimodal, tree-structured code generation to translate scene understanding into deployable behavior across tasks and embodiments.",
+    "open_source": true,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2402.16117",
+      "code": "https://github.com/RoboCodeX-source/RoboCodeX_code"
+    }
+  },
+  {
+    "id": "genchip",
+    "title": "GenCHiP: Generating Robot Policy Code for High-Precision and Contact-Rich Manipulation Tasks",
+    "date": "2024-04",
+    "venue": "IROS 2024",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Policy code over compliant motion primitives with force, stiffness, and pose constraints.",
+    "feedback": [
+      "Estimated object poses",
+      "Force-aware compliant control",
+      "No autonomous code-repair loop"
+    ],
+    "final_artifact": "Executable policy code for precision and contact-rich manipulation.",
+    "evaluation": "Subtasks derived from the Functional Manipulation Benchmark and NIST task boards under perception and grasp noise.",
+    "summary": "Shows that the action-space abstraction can determine whether generated policy code handles precise, contact-rich tasks.",
+    "open_source": false,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2404.06645",
+      "project": "https://dex-code-gen.github.io/dex-code-gen/"
+    }
+  },
+  {
+    "id": "robocoder",
+    "title": "RoboCoder: Robotic Learning from Basic Skills to General Tasks with Large Language Models",
+    "date": "2024-06",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Action code that composes basic skills for progressively harder simulated tasks.",
+    "feedback": [
+      "Real-time environment observations",
+      "Task pass or failure",
+      "Dynamic action-code refinement"
+    ],
+    "final_artifact": "Refined executable action code.",
+    "evaluation": "Eighty manually designed tasks across seven simulated entities, including a humanoid setting.",
+    "summary": "An early closed-loop coding framework that updates action programs from environment feedback instead of relying only on one-shot synthesis.",
+    "open_source": false,
+    "real_robot": false,
+    "links": {
+      "paper": "https://arxiv.org/abs/2406.03757"
+    }
+  },
+  {
+    "id": "robopro",
+    "title": "Robotic Programmer: Video Instructed Policy Code Generation for Robotic Manipulation",
+    "date": "2025-01",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Executable robot policy code that invokes an embodiment-specific skill API.",
+    "feedback": [
+      "Visual observations and free-form instructions",
+      "Video2Code-generated training supervision",
+      "No test-time repair loop"
+    ],
+    "final_artifact": "A policy program for zero-shot manipulation.",
+    "evaluation": "Zero-shot manipulation on RLBench and LIBERO plus real-world experiments and API-variation tests.",
+    "summary": "Trains a multimodal code generator on 115,000 Video2Code examples, making code synthesis itself the learned robot capability.",
+    "open_source": false,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2501.04268",
+      "project": "https://video2code.github.io/RoboPro-website/"
+    }
+  },
+  {
+    "id": "dahlia",
+    "title": "Embodied Long Horizon Manipulation with Closed-loop Code Generation and Incremental Few-shot Adaptation",
+    "date": "2025-03",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Executable long-horizon code plans rather than natural-language subtask lists.",
+    "feedback": [
+      "RGB-D outcome reports",
+      "Structured plan-execution misalignment feedback",
+      "Incrementally added successful examples"
+    ],
+    "final_artifact": "A replanned executable manipulation program.",
+    "evaluation": "More than 30 seen and unseen tasks across LoHoRavens, CALVIN, Franka Kitchen, and cluttered real settings.",
+    "summary": "DAHLIA closes the loop around executable code plans with a multimodal reporter and incremental few-shot memory.",
+    "open_source": true,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2503.21969",
+      "code": "https://github.com/Ghiara/DAHLIA",
+      "project": "https://ghiara.github.io/DAHLIA/"
+    }
+  },
+  {
+    "id": "genswarm",
+    "title": "GenSwarm: Scalable Multi-Robot Code-Policy Generation and Deployment via Language Models",
+    "date": "2025-03",
+    "venue": "npj Robotics",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Python skill libraries, skill graphs, and deployable code policies for multi-robot systems.",
+    "feedback": [
+      "Static code checks",
+      "Simulation and video feedback",
+      "Optional human feedback"
+    ],
+    "final_artifact": "A verified multi-robot code policy and reusable skill graph.",
+    "evaluation": "Simulated and physical multi-robot tasks, including altered and unseen instructions, against agent and CaP baselines.",
+    "summary": "Extends CaP to multi-robot deployment with specialized language agents, a skill graph, simulation validation, and hardware translation.",
+    "open_source": true,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2503.23875",
+      "code": "https://github.com/WindyLab/GenSwarm"
+    }
+  },
+  {
+    "id": "hycodepolicy",
+    "title": "HyCodePolicy: Hybrid Language Controllers for Multimodal Monitoring and Decision in Embodied Agents",
+    "date": "2025-08",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Checkpointed manipulation programs that can be revised after execution failures.",
+    "feedback": [
+      "Program execution traces",
+      "Checkpoint images",
+      "VLM-generated failure analysis"
+    ],
+    "final_artifact": "A repaired executable manipulation program.",
+    "evaluation": "RoboTwin 1.0 and Bi2Code comparisons against one-shot CaP and CodeAct-style baselines.",
+    "summary": "Pairs code execution with multimodal checkpoint monitoring so a language controller can diagnose and repair failed plans.",
+    "open_source": false,
+    "real_robot": false,
+    "links": {
+      "paper": "https://arxiv.org/abs/2508.02629"
+    }
+  },
+  {
+    "id": "growing-embodied-agent",
+    "title": "Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills",
+    "date": "2025-09",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Long-horizon manipulation code and reusable skills distilled from human corrections.",
+    "feedback": [
+      "Human natural-language corrections",
+      "Execution outcomes",
+      "Retrieval from an external skill memory"
+    ],
+    "final_artifact": "Executable task code plus a persistent reusable skill library.",
+    "evaluation": "Ravens, Franka Kitchen, MetaWorld, and real-world long-horizon tasks, including programs spanning more than 20 primitives.",
+    "summary": "Turns localized human corrections into retrievable program skills, making lifelong CaP memory explicit and editable.",
+    "open_source": false,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2509.18597"
+    }
+  },
+  {
+    "id": "reliable-code-as-policies",
+    "title": "Towards Reliable Code-as-Policies: A Neuro-Symbolic Framework for Embodied Task Planning",
+    "date": "2025-10",
+    "venue": "NeurIPS 2025",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Task code plus exploratory programs that acquire missing observations.",
+    "feedback": [
+      "Symbolic verification",
+      "Interactive environment observations",
+      "Execution validation"
+    ],
+    "final_artifact": "A symbolically checked, environment-grounded task program.",
+    "evaluation": "Dynamic and partially observable RLBench tasks plus real-world experiments.",
+    "summary": "Adds explicit verification and active information gathering to reduce grounding failures in generated robot programs.",
+    "open_source": false,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2510.21302"
+    }
+  },
+  {
+    "id": "alrm",
+    "title": "ALRM: Agentic LLM for Robotic Manipulation",
+    "date": "2026-01",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Executable Code-as-Policy controllers or ReAct-style tool calls under a shared benchmark.",
+    "feedback": [
+      "Environment observations",
+      "Tool results",
+      "ReAct reasoning traces in the tool-policy setting"
+    ],
+    "final_artifact": "An executable control program or online tool-use policy.",
+    "evaluation": "Fifty-six manipulation tasks across multiple simulated environments, model families, and language variants.",
+    "summary": "A broad benchmark that compares code generation and online tool use as two agentic control interfaces.",
+    "open_source": false,
+    "real_robot": false,
+    "links": {
+      "paper": "https://arxiv.org/abs/2601.19510"
+    }
+  },
+  {
+    "id": "act-observe-rewrite",
+    "title": "Act-Observe-Rewrite: Multimodal Coding Agents as In-Context Policy Learners for Robot Manipulation",
+    "date": "2026-03",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "An entire low-level Python controller class rewritten between robot episodes.",
+    "feedback": [
+      "RGB-D keyframes",
+      "Reward and phase logs",
+      "Structured failure diagnostics"
+    ],
+    "final_artifact": "A revised low-level controller implementation.",
+    "evaluation": "Three robosuite UR5e manipulation tasks with sandboxing, action clamps, and rollback.",
+    "summary": "Makes the full controller, rather than a skill sequence, the unit of multimodal diagnosis and test-time rewrite.",
+    "open_source": false,
+    "real_robot": false,
+    "links": {
+      "paper": "https://arxiv.org/abs/2603.04466"
+    }
+  },
+  {
+    "id": "cap-x",
+    "title": "CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation",
+    "date": "2026-03",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Robot programs and automatically synthesized skills over perception and control primitives.",
+    "feedback": [
+      "Structured execution feedback",
+      "Visual differencing",
+      "Multi-turn rollout history"
+    ],
+    "final_artifact": "An iteratively repaired policy program and optional skill library.",
+    "evaluation": "CaP-Gym with 187 tasks; CaP-Bench across 12 models; simulation, real embodiments, and sim-to-real experiments.",
+    "summary": "Turns CaP into a controlled agent benchmark and shows how abstraction quality and test-time computation jointly determine reliability.",
+    "curator_pick": true,
+    "open_source": true,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2603.22435",
+      "code": "https://github.com/capgym/cap-x",
+      "project": "https://capgym.github.io/"
+    }
+  },
+  {
+    "id": "rho",
+    "title": "RHO: Your Coding Agent is Secretly a Roboticist",
+    "date": "2026-06",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Interpretable multi-file repositories containing prompts, tools, wrappers, routing, and control code.",
+    "feedback": [
+      "Environment reward",
+      "Program execution traces",
+      "Reflective repository-level search"
+    ],
+    "final_artifact": "A pre-deployment-optimized neurosymbolic policy repository.",
+    "evaluation": "LIBERO-Pro, robosuite, and held-out O3DE tasks, including single-turn deployment and harness-efficiency measures.",
+    "summary": "Expands the policy artifact from one program to a repository, shifting expensive search before deployment while retaining fixed execution.",
+    "curator_pick": true,
+    "open_source": false,
+    "real_robot": false,
+    "links": {
+      "paper": "https://arxiv.org/abs/2606.16458",
+      "project": "https://rho-robotics.github.io/"
+    }
+  },
+  {
+    "id": "playful-agentic-robot-learning",
+    "title": "Playful Agentic Robot Learning",
+    "date": "2026-06",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Self-proposed task programs and persistent skills distilled from verified retries during play.",
+    "feedback": [
+      "Execution outcomes",
+      "Failure diagnosis",
+      "Verifier results"
+    ],
+    "final_artifact": "A frozen reusable code-skill library plus task programs.",
+    "evaluation": "LIBERO-Pro, MolmoSpaces, cross-environment robosuite transfer, and zero-shot physical-robot transfer.",
+    "summary": "RATs uses autonomous play to discover, repair, verify, and distill program skills that transfer beyond the training environment.",
+    "open_source": true,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2606.19419",
+      "code": "https://github.com/Playful-RATs/RATs",
+      "project": "https://playful-rats.github.io/"
+    }
+  },
+  {
+    "id": "aspire",
+    "title": "ASPIRE: Agentic Skills Discovery for Robotics",
+    "date": "2026-06",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Robot programs, validated repairs, and parameterized skills that persist across tasks.",
+    "feedback": [
+      "Fine-grained multimodal execution traces",
+      "Automatic failure diagnosis and revalidation",
+      "Evolutionary task and program search"
+    ],
+    "final_artifact": "A continually expanding library of verified program skills.",
+    "evaluation": "LIBERO-Pro, robosuite, BEHAVIOR-1K, unseen long-horizon tasks, and cross-embodiment real-robot transfer.",
+    "summary": "Treats external code memory as continual learning: verified repairs are abstracted into reusable skills rather than folded into model weights.",
+    "curator_pick": true,
+    "open_source": false,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2607.00272",
+      "project": "https://research.nvidia.com/labs/gear/aspire/"
+    }
+  },
+  {
+    "id": "graph-as-policy",
+    "title": "GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness for Variational Automation Tasks",
+    "date": "2026-07",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Directed computation graphs whose nodes are modular perception, planning, and control skills.",
+    "feedback": [
+      "Parallel simulation rehearsal",
+      "Task success and throughput",
+      "Graph-structure and parameter search"
+    ],
+    "final_artifact": "A rehearsed computation graph deployed as the robot policy.",
+    "evaluation": "Eight new variational-automation benchmarks: four simulated and four physical.",
+    "summary": "Replaces a monolithic policy script with an editable computation graph and uses generated simulations to rehearse candidate structures.",
+    "curator_pick": true,
+    "open_source": true,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2607.05369",
+      "code": "https://github.com/graph-robots/graph-as-policy",
+      "project": "https://graph-robots.github.io/gap/"
+    }
+  },
+  {
+    "id": "harness-vla",
+    "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+    "date": "2026-07",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Task programs, primitive bindings, retry logic, and memories around a frozen VLA.",
+    "feedback": [
+      "Task-specific execution traces",
+      "Global success rules",
+      "Primitive failure models"
+    ],
+    "final_artifact": "An agent harness that composes analytic primitives with a retryable VLA primitive.",
+    "evaluation": "Perturbed LIBERO-Pro, RoboCasa365, and RoboTwin C2R simulation benchmarks.",
+    "summary": "A clean division of labor: the coding agent handles semantics, long-horizon recovery, and memory while the frozen VLA handles local contact-rich motion.",
+    "curator_pick": true,
+    "open_source": true,
+    "real_robot": false,
+    "links": {
+      "paper": "https://arxiv.org/abs/2607.08448",
+      "code": "https://github.com/RLinf/RPent"
+    }
+  },
+  {
+    "id": "memento",
+    "title": "MEMENTO: Memory-Guided Memetic Code-as-Policy Evolution",
+    "date": "2026-07",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Executable policies and rollout evaluators evolved through mutation, crossover, and memory.",
+    "feedback": [
+      "Rollout scores",
+      "Failure memories",
+      "Evaluator-guided evolutionary selection"
+    ],
+    "final_artifact": "An evolved executable policy and its learned evaluator.",
+    "evaluation": "Robosuite Tower of Hanoi, AI2-THOR tasks, held-out variants, and sim-to-real transfer to a Franka robot.",
+    "summary": "Uses memetic search to evolve both policy code and the evaluator that directs subsequent code mutations.",
+    "open_source": true,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2607.22832",
+      "code": "https://github.com/sygkounas/MEMENTO"
+    }
+  },
+  {
+    "id": "architect",
+    "title": "A Few Words Go a Long Way: Language Guided Robot Policy Synthesis",
+    "date": "2026-07",
+    "venue": "arXiv",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "core",
+    "agent_writes": "Modular robot programs and persistent skills grounded from localized language corrections.",
+    "feedback": [
+      "Human natural-language corrections",
+      "Program execution traces",
+      "Skill-library retrieval"
+    ],
+    "final_artifact": "An executable policy program plus a reusable skill library.",
+    "evaluation": "Physical Franka tasks spanning long horizons, articulated-object manipulation, and cloth folding.",
+    "summary": "ARCHITECT frames robot policy acquisition as interactive program synthesis, localizing human feedback to editable code and reusable skills.",
+    "open_source": true,
+    "real_robot": true,
+    "links": {
+      "paper": "https://arxiv.org/abs/2607.23784",
+      "code": "https://github.com/robo-architect/architect-franka",
+      "project": "https://robo-architect.github.io/"
+    }
+  },
+  {
+    "id": "claude-plays-robotics",
+    "title": "Claude Plays Robotics",
+    "date": "2026-07",
+    "venue": "Anthropic Research",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "related",
+    "strictness_note": "A capability and interface study rather than a standalone CaP method; included because one evaluated interface asks the model to write robot controllers.",
+    "agent_writes": "Python controllers in the programmatic-control condition; other conditions use direct, learned-policy, or high-level interfaces.",
+    "feedback": [
+      "Simulator state and rendered observations",
+      "Execution outcomes",
+      "Interface-specific observations"
+    ],
+    "final_artifact": "Controller code in one evaluation condition.",
+    "evaluation": "A cross-interface capability study spanning classical control, legged robots, and manipulation in simulation, with separate physical-robot demonstrations.",
+    "summary": "Useful evidence that embodiment, abstraction, and control frequency can dominate apparent model capability; it is not a new CaP algorithm.",
+    "open_source": false,
+    "real_robot": false,
+    "links": {
+      "paper": "https://www.anthropic.com/research/claude-plays-robotics"
+    }
+  },
+  {
+    "id": "waddle",
+    "title": "Introducing Waddle: Agents that Control Robots",
+    "date": "2026-07",
+    "venue": "Waddle Labs Blog",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "related",
+    "strictness_note": "A product research post with real-hardware demonstrations and internal evaluations, but without a paper-level benchmark protocol or reproducible release.",
+    "agent_writes": "Task programs and parameterized skills that compose fixed perception and control primitives or call action models.",
+    "feedback": [
+      "Camera observations",
+      "Intermediate outcome verification",
+      "Failure-triggered replanning"
+    ],
+    "final_artifact": "A runnable task program plus skills shared across deployed agents.",
+    "evaluation": "Real-hardware demonstrations, an internal model comparison, and a reported overnight run of roughly 1,000 LEGO operations used to train ACT.",
+    "summary": "A productized CaP stack that combines long-horizon coding agents, shared skills, VLA calls, data collection, and real-robot iteration.",
+    "open_source": false,
+    "real_robot": true,
+    "links": {
+      "project": "https://www.waddlelabs.ai/research/introducing-waddle"
+    }
+  },
+  {
+    "id": "telekinesis-agents",
+    "title": "Telekinesis Physical AI Agents",
+    "date": "2026",
+    "venue": "Product Documentation",
+    "topics": [
+      "code-as-policy"
+    ],
+    "classification": "related",
+    "strictness_note": "The documentation describes executable, reviewable CaP over a large skill library, but does not provide a controlled robot-learning evaluation.",
+    "agent_writes": "Readable Python programs that compose existing robot skills and generate new skills when needed.",
+    "feedback": [
+      "Optional robot-view images",
+      "Typed skill inputs and outputs",
+      "Human code review before execution"
+    ],
+    "final_artifact": "A reviewable Python robot program.",
+    "evaluation": "Product examples and application demos; no controlled empirical benchmark is documented.",
+    "summary": "An industrially oriented CaP product centered on typed, auditable skills and human review before hardware execution.",
+    "open_source": false,
+    "real_robot": false,
+    "links": {
+      "project": "https://docs.telekinesis.ai/agents/introduction.html"
+    }
+  }
+]

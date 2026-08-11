@@ -16,7 +16,7 @@ Last updated: 2026-08-11
 
 | Topic | Status | Immediate next step |
 |---|---|---|
-| Code as Policy | Existing external notes | Import the Feishu export, then audit every source and map it to the shared schema |
+| Code as Policy | First audit complete: 22 Core + 3 Related | Review the draft PR, then audit deferred boundary cases and newly released code |
 | Simulation and Task Generation | Not started | Build the seed corpus and identify recurring generation/evaluation settings |
 | Automated Reward Design | Not started | Audit the reward-generation lineage and its downstream RL protocols |
 | Automated Robot Evaluation | Not started | Separate coding-agent evaluators from learned evaluator baselines and infrastructure systems |
@@ -25,9 +25,9 @@ Last updated: 2026-08-11
 
 ## Immediate next step
 
-Choose one topic for a full audit. For that topic, create a working note in `dev/topic-notes/`, follow `dev/TOPIC_WORKFLOW.md`, and add only source-verified records to `data/papers.json`.
+Review and merge the Code as Policy draft PR. Then choose the next topic for a full audit and follow dev/TOPIC_WORKFLOW.md.
 
 ## Known blockers
 
-- The existing Code as Policy Feishu page needs to be exported or attached before it can be imported reliably.
-- Counts are intentionally zero until entries receive topic-level source verification.
+- The full Code as Policy Feishu page is still unavailable, but the user-provided condensed note was sufficient for the first audit.
+- Other five topic counts remain intentionally zero until they receive topic-level source verification.
