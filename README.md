@@ -5,18 +5,18 @@
 <div align="center">
 
 [![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
-![Works](https://img.shields.io/badge/Works-84-2F80ED?style=flat-square)
+![Works](https://img.shields.io/badge/Works-87-2F80ED?style=flat-square)
 ![Topics](https://img.shields.io/badge/Topics-6-6C5CE7?style=flat-square)
 ![Open source](https://img.shields.io/badge/Open_source-42-00A86B?style=flat-square)
-![Real robot](https://img.shields.io/badge/Real_robot-42-E17055?style=flat-square)
-![Related systems](https://img.shields.io/badge/Related_systems-12-7F8C8D?style=flat-square)
+![Real robot](https://img.shields.io/badge/Real_robot-43-E17055?style=flat-square)
+![Related systems](https://img.shields.io/badge/Related_systems-13-7F8C8D?style=flat-square)
 <br>
 ![Code as Policy](https://img.shields.io/badge/Code_as_Policy-24-3867D6?style=flat-square)
 ![Environments and Tasks](https://img.shields.io/badge/Environments_%26_Tasks-26-20BF6B?style=flat-square)
 ![Reward Design](https://img.shields.io/badge/Reward_Design-23-F7B731?style=flat-square)
 ![Policy Evaluation](https://img.shields.io/badge/Policy_Evaluation-6-EB3B5A?style=flat-square)
 ![Synthetic Data](https://img.shields.io/badge/Synthetic_Data-22-8854D0?style=flat-square)
-![Robot Autoresearch](https://img.shields.io/badge/Robot_Autoresearch-0-0FB9B1?style=flat-square)
+![Robot Autoresearch](https://img.shields.io/badge/Robot_Autoresearch-2-0FB9B1?style=flat-square)
 
 [![Last commit](https://img.shields.io/github/last-commit/harooos/awesome-coding-agents-for-robot-learning?style=flat-square)](https://github.com/harooos/awesome-coding-agents-for-robot-learning/commits/main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
@@ -43,14 +43,14 @@ Most systems do not yet close this entire loop. The six overlapping topics below
 - **🎯 [Reward Design](#-reward-design)** — agent-authored executable logic supplies the policy-training objective · `23 core · 1 related`
 - **🔍 [Policy Evaluation](#-policy-evaluation)** — agent-authored tasks, scenarios, or judges measure existing and held-out robot policies · `6 core · 3 related`
 - **📦 [Synthetic Data](#-synthetic-data)** — executable data-producing artifacts, justified by downstream policy learning · `22 core · 2 related`
-- **🔬 [Robot Autoresearch](#-robot-autoresearch)** — the agent runs the research loop: experiments, diagnosis, iteration · `planned`
+- **🔬 [Robot Autoresearch](#-robot-autoresearch)** — the agent runs the research loop: experiments, diagnosis, iteration · `2 core · 1 related`
 
 Two questions resolve most ambiguous cases. **Can the policy see the signal during training?** Visible → Reward Design or Synthetic Data; invisible → Policy Evaluation. **What does the agent decide?** The shape of an artifact → Environments and Tasks, Reward Design, Policy Evaluation, or Synthetic Data; which experiment to run next → Robot Autoresearch.
 
 - ✅ **Core = C1 + C2 + C3 + C4.** `C1` an LLM or coding agent generates, edits, or debugs executable code or a simulator-consumed structured artifact · `C2` the artifact is part of a robot-learning system · `C3` it is actually run, compiled, trained, or deployed · `C4` empirical results are reported. Works missing one criterion are kept as `Related` and explained in each section's **📝 Scope notes**.
 - 📊 **Evidence is recorded, not assumed.** Each work is placed on the **[E0–E4 ladder](#reading-the-evidence)** by the kind of experiment it actually reports.
 - 💻 open source · 🤖 real-robot evaluation · ⚠️ built by reading papers, project pages, and source code with coding agents, then human-reviewed. Errors are possible; corrections welcome.
-- 📅 Last updated: 2026-08-17
+- 📅 Last updated: 2026-08-18
 
 <details>
 <summary>📋 <b>Scope</b> — what is deliberately excluded, and when a work is marked <code>Related</code></summary>
@@ -291,7 +291,17 @@ The agent writes or configures an executable data-producing artifact: a task or 
 
 The agent runs the outer research loop: designing experiments, modifying training code, diagnosing failures, and iterating on a policy. Autoresearch — coding agents that run experiments, analyze results, and decide what to try next — became a distinct research area in 2026; this topic covers its robot-learning instantiation. Core requires result-conditioned changes across repeated experiments, not a fixed sweep or one-time training pipeline. High-level human direction is compatible with the topic when the agent makes the detailed code and experiment decisions and that intervention is disclosed. Where the generated code *is* the deployed policy, see [Code as Policy](#-code-as-policy).
 
-_To be curated by an independent contributor._
+| Date | Org | Links | ⭐ | Title / Notes |
+| :---: | :---: | :---: | :---: | :--- |
+| 2026.07 | GigaAI / Tsinghua University | [arXiv 2607.13960](https://arxiv.org/abs/2607.13960) · [Code](https://github.com/open-gigaai/giga-world-policy) · [Website](https://open-gigaai.github.io/giga-world-policy/) | <img src="https://img.shields.io/github/stars/open-gigaai/giga-world-policy?style=flat-square&label=&color=555" alt="stars"> | 💻🤖 `Related` **GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch** — Automates pilot runs and validation-based hyperparameter selection for a real-robot world-action model. |
+| 2026.06 | NVIDIA et al. | [arXiv 2606.19980](https://arxiv.org/abs/2606.19980) · [Website](https://research.nvidia.com/labs/gear/enpire/) |  | 🤖 `E0` `E3` `E4` **ENPIRE: Agentic Robot Policy Self-Improvement in the Real World** — Coding agents revise policy and training code from physical rollout logs; fleet branches accelerate pin-insertion learning and transfer a RoboCasa tool-use strategy to hardware. |
+| 2026.03 | IIT Kanpur | [arXiv 2603.27416](https://arxiv.org/abs/2603.27416) |  | `E0` `E3` **Agent-Driven Autonomous Reinforcement Learning Research: Iterative Policy Improvement for Quadruped Locomotion** — With human-set high-level directions, an agent edits rewards, terrains, and training configurations across 14 waves and more than 70 Isaac Lab experiments. |
+<details>
+<summary>📝 <b>Scope notes</b> — why the <code>Related</code> entries sit outside the core criteria</summary>
+
+- **GigaWorld-Policy-0.5** — fails C1: the paper does not identify coding-agent-authored or edited experiment code.
+
+</details>
 
 ---
 
