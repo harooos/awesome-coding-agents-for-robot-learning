@@ -2,31 +2,30 @@
   <img src="assets/banner.svg" alt="Awesome Coding Agents for Robot Learning" width="100%">
 </div>
 
-<div align="center">
+<h1 align="center">Awesome Coding Agents for Robot Learning</h1>
 
-[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
-![Works](https://img.shields.io/badge/Works-87-2F80ED?style=flat-square)
-![Topics](https://img.shields.io/badge/Topics-6-6C5CE7?style=flat-square)
-![Open source](https://img.shields.io/badge/Open_source-42-00A86B?style=flat-square)
-![Real robot](https://img.shields.io/badge/Real_robot-43-E17055?style=flat-square)
-![Related systems](https://img.shields.io/badge/Related_systems-13-7F8C8D?style=flat-square)
-<br>
-![Code as Policy](https://img.shields.io/badge/Code_as_Policy-24-3867D6?style=flat-square)
-![Environments and Tasks](https://img.shields.io/badge/Environments_%26_Tasks-26-20BF6B?style=flat-square)
-![Reward Design](https://img.shields.io/badge/Reward_Design-23-F7B731?style=flat-square)
-![Policy Evaluation](https://img.shields.io/badge/Policy_Evaluation-6-EB3B5A?style=flat-square)
-![Synthetic Data](https://img.shields.io/badge/Synthetic_Data-22-8854D0?style=flat-square)
-![Robot Autoresearch](https://img.shields.io/badge/Robot_Autoresearch-2-0FB9B1?style=flat-square)
+<p align="center">
+  <strong>The executable layer of agentic robot learning — from generated robot programs to agent-driven learning loops.</strong>
+</p>
 
-[![Last commit](https://img.shields.io/github/last-commit/harooos/awesome-coding-agents-for-robot-learning?style=flat-square)](https://github.com/harooos/awesome-coding-agents-for-robot-learning/commits/main)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
+  <img src="https://img.shields.io/badge/Works-87-0B7285?style=flat" alt="87 works">
+  <img src="https://img.shields.io/badge/Open_source-42-0B7285?style=flat" alt="42 open-source works">
+  <img src="https://img.shields.io/badge/Real_robot-43-6F42C1?style=flat" alt="43 works with real-robot evaluation">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-4C566A?style=flat" alt="MIT License"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-0B7285?style=flat" alt="PRs welcome"></a>
+</p>
 
-</div>
-
-# Awesome Coding Agents for Robot Learning
-
-**The executable layer of agentic robot learning — from generated robot programs to agent-driven learning loops.**
+<p align="center">
+  <a href="#-code-as-policy">🦾 Code as Policy</a> ·
+  <a href="#-environments-and-tasks">🌍 Environments &amp; Tasks</a> ·
+  <a href="#-reward-design">🎯 Reward Design</a>
+  <br>
+  <a href="#-policy-evaluation">🔍 Policy Evaluation</a> ·
+  <a href="#-synthetic-data">📦 Synthetic Data</a> ·
+  <a href="#-robot-autoresearch">🔬 Robot Autoresearch</a>
+</p>
 
 Robot learning is becoming **agent-editable**. Coding agents no longer only translate instructions into robot programs: they create and revise the executable artifacts around a robot policy — the policy itself, tasks and environments, rewards, evaluation scenarios, synthetic-data generators, and even the outer training loop.
 
