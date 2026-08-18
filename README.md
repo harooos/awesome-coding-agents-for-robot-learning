@@ -5,26 +5,26 @@
 <h1 align="center">Awesome Coding Agents for Robot Learning</h1>
 
 <p align="center">
-  <strong>The executable layer of agentic robot learning — from generated robot programs to agent-driven learning loops.</strong>
+  <strong>How coding agents write, run, and refine code for robot learning.</strong>
 </p>
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
-  <img src="https://img.shields.io/badge/Works-87-0B7285?style=flat" alt="87 works">
-  <img src="https://img.shields.io/badge/Open_source-42-0B7285?style=flat" alt="42 open-source works">
-  <img src="https://img.shields.io/badge/Real_robot-43-6F42C1?style=flat" alt="43 works with real-robot evaluation">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-4C566A?style=flat" alt="MIT License"></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-0B7285?style=flat" alt="PRs welcome"></a>
+  <img src="https://img.shields.io/badge/Works-87-168B8F?style=flat-square" alt="87 works">
+  <img src="https://img.shields.io/badge/Open_source-42-168B8F?style=flat-square" alt="42 open-source works">
+  <img src="https://img.shields.io/badge/Real_robot-43-6C63D8?style=flat-square" alt="43 works with real-robot evaluation">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-536270?style=flat-square" alt="MIT License"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-168B8F?style=flat-square" alt="PRs welcome"></a>
 </p>
 
 <p align="center">
-  <a href="#-code-as-policy">🦾 Code as Policy</a> ·
-  <a href="#-environments-and-tasks">🌍 Environments &amp; Tasks</a> ·
-  <a href="#-reward-design">🎯 Reward Design</a>
+  <a href="#-code-as-policy"><code>Code as Policy</code></a>&nbsp;
+  <a href="#-environments-and-tasks"><code>Environments &amp; Tasks</code></a>&nbsp;
+  <a href="#-reward-design"><code>Reward Design</code></a>
   <br>
-  <a href="#-policy-evaluation">🔍 Policy Evaluation</a> ·
-  <a href="#-synthetic-data">📦 Synthetic Data</a> ·
-  <a href="#-robot-autoresearch">🔬 Robot Autoresearch</a>
+  <a href="#-policy-evaluation"><code>Policy Evaluation</code></a>&nbsp;
+  <a href="#-synthetic-data"><code>Synthetic Data</code></a>&nbsp;
+  <a href="#-robot-autoresearch"><code>Robot Autoresearch</code></a>
 </p>
 
 Robot learning is becoming **agent-editable**. Coding agents no longer only translate instructions into robot programs: they create and revise the executable artifacts around a robot policy — the policy itself, tasks and environments, rewards, evaluation scenarios, synthetic-data generators, and even the outer training loop.
