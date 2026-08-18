@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
-  <img src="https://img.shields.io/badge/Works-87-168B8F?style=flat-square" alt="87 works">
+  <img src="https://img.shields.io/badge/Works-88-168B8F?style=flat-square" alt="88 works">
   <img src="https://img.shields.io/badge/Open_source-42-168B8F?style=flat-square" alt="42 open-source works">
   <img src="https://img.shields.io/badge/Real_robot-43-6C63D8?style=flat-square" alt="43 works with real-robot evaluation">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-536270?style=flat-square" alt="MIT License"></a>
@@ -37,7 +37,7 @@ Most systems do not yet close this entire loop. The six overlapping topics below
 
 **Taxonomy** — topics are named after their primary research object. They overlap; a work may appear in more than one.
 
-- **🦾 [Code as Policy](#-code-as-policy)** — the generated code *is* the deployed policy · `24 core · 2 related`
+- **🦾 [Code as Policy](#-code-as-policy)** — the generated code *is* the deployed policy · `25 core · 2 related`
 - **🌍 [Environments and Tasks](#-environments-and-tasks)** — generated code or structured artifacts define the world, task, or curriculum · `26 core · 4 related`
 - **🎯 [Reward Design](#-reward-design)** — agent-authored executable logic supplies the policy-training objective · `23 core · 1 related`
 - **🔍 [Policy Evaluation](#-policy-evaluation)** — agent-authored tasks, scenarios, or judges measure existing and held-out robot policies · `6 core · 3 related`
@@ -97,6 +97,7 @@ The agent synthesizes an external, executable robot policy — a program, skill 
 
 | Date | Org | Links | ⭐ | Title / Notes |
 | :---: | :---: | :---: | :---: | :--- |
+| 2026.08 | University of Southern California et al. | [arXiv 2608.16889](https://arxiv.org/abs/2608.16889) |  | `E0` **Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory** — Uses transition-aware memory within and across subtasks to efficiently explore long-horizon tasks with a coding-agent harness over a VLA. |
 | 2026.07 | Örebro University / Linköping University | [arXiv 2607.22832](https://arxiv.org/abs/2607.22832) · [Code](https://github.com/sygkounas/MEMENTO) | <img src="https://img.shields.io/github/stars/sygkounas/MEMENTO?style=flat-square&label=&color=555" alt="stars"> | 💻🤖 `E0` `E2` `E4` **MEMENTO: Memory-Guided Memetic Code-as-Policy Evolution** — Evolves executable policies and rollout evaluators with memory-guided memetic search. |
 | 2026.07 | Waddle Labs | [Website](https://www.waddlelabs.ai/research/introducing-waddle) |  | 🤖 `E0` `Related` **Introducing Waddle: Agents that Control Robots** — Describes a CaP stack that composes skills and action models on real robots. |
 | 2026.07 | Tsinghua University et al. | [arXiv 2607.08448](https://arxiv.org/abs/2607.08448) · [Code](https://github.com/RLinf/RPent) | <img src="https://img.shields.io/github/stars/RLinf/RPent?style=flat-square&label=&color=555" alt="stars"> | 💻 `E0` `E4` **Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents** — Uses a coding-agent harness to compose analytic primitives with a frozen VLA and reuse successful traces. |
