@@ -72,4 +72,8 @@
     <text x="586" y="198" fill="#f2fbfc" font-size="62" font-weight="700" letter-spacing="-1.2">Awesome Coding Agents</text>
     <text x="586" y="269" fill="url(#accent)" font-size="62" font-weight="700" letter-spacing="-1.2">for Robot Learning</text>
   </g>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18.5" font-weight="400">
+    <text x="590" y="326" fill="#58d8d3">//</text>
+    <text x="625" y="326" fill="#b8ced3">How coding agents write, run, and refine code for robot learning.</text>
+  </g>
 </svg>
