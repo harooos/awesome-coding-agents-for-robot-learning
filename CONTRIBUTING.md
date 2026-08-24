@@ -17,7 +17,7 @@ Works that are highly relevant but fail one criterion can be marked `Related`, w
 
 1. Edit the appropriate table in `README.md` directly.
 2. Prefer authoritative primary sources: the official paper when one exists, the canonical code repository, and the official project page.
-3. Follow the existing `Date / Org / Links / Stars / Title or Notes` row format.
+3. Follow the existing `Date / Org / Links / Stars / Title or Notes` row format. Use only the first listed affiliation in `Org` (without `et al.`), and label the primary publication link `[Paper]` regardless of whether it points to arXiv, a DOI, or a conference page.
 4. Keep the note to one compact, factual sentence. Do not copy the abstract or add unsupported comparative judgments.
 5. Add a work to multiple topic tables only when each placement has an independently evaluated claim.
 6. Update the affected topic count, summary badges, and `Last updated` date.
