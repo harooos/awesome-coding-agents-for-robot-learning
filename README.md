@@ -266,7 +266,7 @@ Additions and corrections are made directly in this README. Please include the t
 
 ## Citation
 
-If this collection is useful in your research, please cite it using GitHub's **Cite this repository** button or the metadata in [CITATION.cff](CITATION.cff).
+If this collection is useful in your research, please cite it as follows:
 
 ```bibtex
 @misc{awesome-coding-agents-robot-learning,
