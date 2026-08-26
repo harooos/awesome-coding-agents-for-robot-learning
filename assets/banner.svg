@@ -74,6 +74,6 @@
   </g>
   <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18.5" font-weight="400">
     <text x="590" y="326" fill="#58d8d3">//</text>
-    <text x="625" y="326" fill="#b8ced3">How coding agents write, run, and refine code for robot learning.</text>
+    <text x="625" y="326" fill="#b8ced3">Coding-agent systems for robot learning and embodied execution.</text>
   </g>
 </svg>

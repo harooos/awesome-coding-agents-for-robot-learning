@@ -4,36 +4,35 @@ Thank you for helping improve **Awesome Coding Agents for Robot Learning**. Cont
 
 ## Before adding a work
 
-Check that the contribution can answer the four core criteria from the README:
+Use these editorial questions to check fit. They are review principles, not a point system or paper-quality score.
 
-1. **C1 Generation** — What executable artifact does the LLM or coding agent generate, edit, select, or debug?
-2. **C2 Placement** — Where does that artifact sit in the robot-learning system?
-3. **C3 Execution** — Is the generated artifact executed, simulated, trained, or deployed?
-4. **C4 Evidence** — What empirical robot-learning evidence is reported?
+1. **Agentic role** — What does the LLM-based agent generate, modify, operate, or adapt?
+2. **Executable layer** — Through what code, structured artifact, tool, skill, policy, or stateful harness does it act?
+3. **Embodied connection** — How is that layer used in robot learning, evaluation, deployment, or physical execution?
+4. **Topic fit** — What is the work's main research object, and which topic best matches it?
 
-Works that are highly relevant but fail one criterion can be marked `Related`, with the missing criterion explained in that section's **Scope notes**, for example: *"fails C4: product post without a controlled benchmark."*
+A work normally enters through executable artifact authoring, first-class harness operation, or both. A single tool call, a language-only plan, ordinary middleware, or a fixed automated pipeline is not sufficient by itself.
 
 ## Adding or updating an entry
 
 1. Edit the appropriate table in `README.md` directly.
 2. Prefer authoritative primary sources: the official paper when one exists, the canonical code repository, and the official project page.
-3. Follow the existing `Date / Org / Links / Stars / Title or Notes` row format. Use only the first listed affiliation in `Org` (without `et al.`), and label the primary publication link `[Paper]` regardless of whether it points to arXiv, a DOI, or a conference page.
-4. Keep the note to one compact, factual sentence. Do not copy the abstract or add unsupported comparative judgments.
-5. Add a work to multiple topic tables only when each placement has an independently evaluated claim.
-6. Update the affected topic count, summary badges, and `Last updated` date.
-7. Preview the rendered Markdown and verify every new link before opening a pull request.
+3. Follow the existing `Date / Org / Links / Stars / Title or Notes` row format. Use only the first listed affiliation in `Org` without `et al.`.
+4. Label the primary source accurately: `[Paper]`, `[Post]`, or `[Docs]`. Keep official implementation and project links as `[Code]` and `[Website]`.
+5. Keep the note to one compact, factual sentence that states what the system contributes and where it was evaluated, executed, or released. Do not copy the abstract or add unsupported comparative judgments.
+6. Place a work first in the topic that matches its main research object. Add another topic only when the source explicitly frames and independently evaluates a distinct topic-specific claim—not merely because the component exists somewhere in the system.
+7. Update the affected topic count, summary badges, and `Last updated` date.
+8. Preview the rendered Markdown and verify every new link before opening a pull request.
 
-## Classification guidelines
+## Curation guidelines
 
-- Use multiple topic placements when the work makes a substantive, evaluated claim in each topic—not merely because components coexist in the system.
-- Use Core only when executable code or a comparably structured executable artifact is generated or modified by an LLM/coding agent and evaluated in a robot-learning setting.
-- Use `Related` for important neighboring systems and explain the exact missing criterion in the section's Scope notes.
-- Show E0–E4 markers in order and include only evidence verified from an official source. Core entries require E0.
+- Keep **topic fit**, **evidence type**, **evidence rigor**, and **source genre** separate. A product research post may be highly topical without offering the protocol disclosure of a paper; describe that difference rather than treating it as a different topic.
+- When a source reports empirical results without a fully disclosed benchmark, use careful verbs such as *reports* and state the setting that is actually documented.
 - Use 🤖 only when a physical robot is part of the reported evaluation.
-- Use 💻 and a GitHub stars badge only when an official public code implementation is linked.
+- Add `[Code]` and a GitHub stars badge only for an official public implementation. The code link already communicates open-source availability; no separate row icon is needed.
 
 ## Quality standard
 
-Whenever possible, verify the date, organization, links, and note against primary sources such as the paper PDF, official repository, project documentation, and released evaluation artifacts. If a claim cannot be verified, omit it or state the uncertainty explicitly.
+Whenever possible, verify the date, organization, links, contribution, evaluation setting, and physical-robot claim against primary sources such as the paper, official repository, project documentation, and released evaluation artifacts. If a claim cannot be verified, omit it or state the uncertainty explicitly.
 
-Promotional submissions, duplicate project pages, and entries without a clear connection to the scope may be declined.
+Promotional submissions, duplicate project pages, generic agentic-robotics systems without the coding-agent executable layer, and entries without a clear robotics research connection may be declined.
