@@ -11,7 +11,7 @@ Use these editorial questions to check fit. They are review principles, not a po
 3. **Embodied connection** — How is that layer used in robot learning, evaluation, deployment, or physical execution?
 4. **Topic fit** — What is the work's main research object, and which topic best matches it?
 
-A work normally enters through executable artifact authoring, first-class harness operation, or both. A single tool call, a language-only plan, ordinary middleware, or a fixed automated pipeline is not sufficient by itself.
+A work normally enters through executable artifact authoring, robot operation, or both. The work should substantively study or develop the agent's role in robot learning or robot operation. A language-only plan, ordinary middleware, or a fixed automated pipeline is not sufficient by itself.
 
 ## Adding or updating an entry
 
@@ -35,4 +35,4 @@ A work normally enters through executable artifact authoring, first-class harnes
 
 Whenever possible, verify the date, organization, links, contribution, evaluation setting, and physical-robot claim against primary sources such as the paper, official repository, project documentation, and released evaluation artifacts. If a claim cannot be verified, omit it or state the uncertainty explicitly.
 
-Promotional submissions, duplicate project pages, generic agentic-robotics systems without the coding-agent executable layer, and entries without a clear robotics research connection may be declined.
+Promotional submissions, duplicate project pages, generic agentic-robotics systems without the coding-agent executable layer, and entries without a substantive robot-learning or robot-operation contribution may be declined.

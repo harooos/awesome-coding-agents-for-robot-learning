@@ -10,16 +10,16 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
-  <img src="https://img.shields.io/badge/Works-87-168B8F?style=flat-square" alt="87 works">
-  <img src="https://img.shields.io/badge/Open_source-46-168B8F?style=flat-square" alt="46 open-source works">
-  <img src="https://img.shields.io/badge/Real_robot-48-6C63D8?style=flat-square" alt="48 works with real-robot evaluation">
+  <img src="https://img.shields.io/badge/Works-98-168B8F?style=flat-square" alt="98 works">
+  <img src="https://img.shields.io/badge/Open_source-51-168B8F?style=flat-square" alt="51 open-source works">
+  <img src="https://img.shields.io/badge/Real_robot-55-6C63D8?style=flat-square" alt="55 works with real-robot evaluation">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-536270?style=flat-square" alt="MIT License"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-168B8F?style=flat-square" alt="PRs welcome"></a>
 </p>
 
 <p align="center">
   <a href="#-code-as-policy"><code>Code as Policy</code></a>&nbsp;
-  <a href="#-embodied-agent-harness"><code>Embodied Agent Harness</code></a>
+  <a href="#-robot-use-agents"><code>Robot-Use Agents</code></a>
   <br>
   <a href="#-environments-and-tasks"><code>Environments &amp; Tasks</code></a>&nbsp;
   <a href="#-reward-design"><code>Reward Design</code></a>&nbsp;
@@ -31,7 +31,7 @@
 
 Robot learning is becoming **agent-editable and agent-operated**. Coding-agent systems increasingly act through an explicit, executable layer around robot models. Some agents author or revise code and structured artifacts—the policy itself, tasks and environments, rewards, evaluators, data generators, or research code. Others operate a stateful harness over robot tools, skills, controllers, and learned policies.
 
-Here, *coding-agent systems* means LLM-based systems that act through this explicit executable layer. We follow the coding-agent architectural lineage rather than requiring source-code emission in every work. Because the layer can be executed, observed, inspected, and revised, it provides a concrete interface between language-model reasoning, robot learning, and physical feedback.
+Here, *coding-agent systems* means LLM-based systems that act through this explicit executable layer. Source-code generation is not required in every work: agents may also act through robot interfaces and execution feedback. Because the layer can be executed, observed, inspected, and revised, it provides a concrete interface between language-model reasoning, robot learning, and physical feedback.
 
 > **The organizing question:** What does the agent author or operate, where does it enter the robot lifecycle, and how is the loop closed?
 
@@ -39,13 +39,13 @@ The seven topics below are named after their primary research object. Each work 
 
 **Taxonomy**
 
-- **💻 [Code as Policy](#-code-as-policy)** — agent-authored executable behavior is the deployed policy · `25 works`
-- **🕹️ [Embodied Agent Harness](#-embodied-agent-harness)** — agentic runtimes connect foundation models to robot tools, skills, and policies · `11 works`
+- **💻 [Code as Policy](#-code-as-policy)** — agent-authored executable behavior is the deployed policy · `20 works`
+- **🕹️ [Robot-Use Agents](#-robot-use-agents)** — agents observe, act, and adapt through robot interfaces, tools, skills, and policies · `26 works`
 - **🏠 [Environments and Tasks](#-environments-and-tasks)** — generated code or structured artifacts define the world, task, or curriculum · `27 works`
 - **🎯 [Reward Design](#-reward-design)** — agent-authored executable logic supplies the policy-training objective · `23 works`
 - **📝 [Policy Evaluation](#-policy-evaluation)** — agent-authored tasks, scenarios, or judges measure existing and held-out robot policies · `5 works`
 - **📚 [Synthetic Data](#-synthetic-data)** — executable data-producing artifacts are tested through downstream policy learning · `22 works`
-- **🔬 [Robot Autoresearch](#-robot-autoresearch)** — the agent runs the research loop: experiments, diagnosis, and iteration · `2 works`
+- **🔬 [Robot Autoresearch](#-robot-autoresearch)** — the agent runs the research loop: experiments, diagnosis, and iteration · `3 works`
 
 **Selection principles** — these guide editorial review; they are not a mechanical score.
 
@@ -56,7 +56,7 @@ The seven topics below are named after their primary research object. Each work 
 Topic fit, evidence rigor, and source genre are reviewed separately. A paper, technical report, research post, or released system may be included when it is clearly topical; its row should state only what the source supports.
 
 - 🤖 physical-robot evaluation · `[Code]` official public implementation · ⚠️ curated from primary sources with coding agents, then human-reviewed. Corrections are welcome.
-- 📅 Last updated: 2026-08-27
+- 📅 Last updated: 2026-09-14
 
 <details>
 <summary>📋 <b>Scope</b> — the two inclusion pathways and deliberate exclusions</summary>
@@ -64,9 +64,9 @@ Topic fit, evidence rigor, and source genre are reviewed separately. A paper, te
 A work usually enters through one or both pathways:
 
 - **Artifact authoring:** the agent generates, edits, debugs, or evolves executable code or a simulator-consumed structured artifact.
-- **Harness operation:** the agent runs a first-class, stateful execution layer over explicit robot tools, skills, controllers, or learned policies, including observation, context, verification, recovery, memory, or lifecycle orchestration.
+- **Robot operation:** LLM/VLM agents use observations and execution feedback to operate robots through control interfaces, tools, skills, or learned policies. This includes studies of robot-use capabilities and action interfaces, as well as embodied harnesses.
 
-A single tool-selection call is not enough by itself. The agent-controlled artifact or runtime must be a substantive research object rather than ordinary implementation detail.
+The work should substantively study or develop the agent's role in robot learning or robot operation.
 
 Generally out of scope:
 
@@ -75,29 +75,25 @@ Generally out of scope:
 - ordinary middleware, fixed automated pipelines, or procedural generation without an LLM-based agent;
 - assets, images, videos, or worlds that are not used in robot learning, evaluation, or embodied execution;
 - code-generation proposals that never run, evaluate, or release the generated system;
-- generic software-engineering agents applied to robotics code without a robotics research question.
+- generic software-engineering agents applied to robotics code without a substantive robot-learning or robot-operation contribution.
 
 </details>
 
 ---
 ## 💻 Code as Policy
 
-Code as Policy studies agent-authored executable behavior. The generated or revised artifact—a program, behavior tree, computation graph, policy repository, or reusable code skill—directly defines the deployed robot policy. One-shot synthesis and execution-feedback-driven rewriting both belong here. Tool selection, memory, verification, or recovery alone belong to [Embodied Agent Harness](#-embodied-agent-harness) unless they produce or modify such a policy artifact. Systems that mainly edit training code, rewards, or data and leave behind a *learned* policy belong to [Robot Autoresearch](#-robot-autoresearch) or [Synthetic Data](#-synthetic-data).
+Code as Policy studies agent-authored executable behavior. The generated or revised artifact—a program, behavior tree, computation graph, policy repository, or reusable code skill—directly defines the deployed robot policy. One-shot synthesis and execution-feedback-driven rewriting both belong here. Tool selection, memory, verification, or recovery alone belong to [Robot-Use Agents](#-robot-use-agents) unless they produce or modify such a policy artifact. Systems that mainly edit training code, rewards, or data and leave behind a *learned* policy belong to [Robot Autoresearch](#-robot-autoresearch) or [Synthetic Data](#-synthetic-data).
 
 | Date | Org | Links | ⭐ | Title / Notes |
 | :---: | :---: | :---: | :---: | :--- |
-| 2026.07 | Örebro University | [Paper](https://arxiv.org/abs/2607.22832) · [Code](https://github.com/sygkounas/MEMENTO) | <img src="https://img.shields.io/github/stars/sygkounas/MEMENTO?style=social&label=&logo=github" alt="Stars"> | 🤖 **MEMENTO: Memory-Guided Memetic Code-as-Policy Evolution** — Evolves executable policies and rollout evaluators with memory-guided memetic search. |
 | 2026.07 | Waddle Labs | [Post](https://www.waddlelabs.ai/research/introducing-waddle) |  | 🤖 **Introducing Waddle: Agents that Control Robots** — Runs multi-turn code-as-policy agents on real robots and grows a shared skill library from execution feedback; the official research post reports success–cost comparisons and data-collection deployments. |
 | 2026.07 | UC Berkeley | [Paper](https://arxiv.org/abs/2607.05369) · [Code](https://github.com/graph-robots/graph-as-policy) · [Website](https://graph-robots.github.io/gap/) | <img src="https://img.shields.io/github/stars/graph-robots/graph-as-policy?style=social&label=&logo=github" alt="Stars"> | 🤖 **GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness for Variational Automation Tasks** — Represents the policy as a computation graph and optimizes it through parallel simulation rehearsal. |
-| 2026.07 | Anthropic | [Post](https://www.anthropic.com/research/claude-plays-robotics) |  | 🤖 **Claude Plays Robotics** — Benchmarks LLM-written Python controllers against direct control, RL-trained policies, and pretrained-policy interfaces across classic control and legged robots. |
 | 2026.07 | University of Washington | [Paper](https://arxiv.org/abs/2607.23784) · [Code](https://github.com/robo-architect/architect-franka) · [Website](https://robo-architect.github.io/) | <img src="https://img.shields.io/github/stars/robo-architect/architect-franka?style=social&label=&logo=github" alt="Stars"> | 🤖 **A Few Words Go a Long Way: Language Guided Robot Policy Synthesis** — ARCHITECT synthesizes modular robot programs and distills localized human corrections into reusable skills. |
 | 2026.06 | Embodied Science | [Paper](https://arxiv.org/abs/2606.16458) · [Website](https://rho-robotics.github.io/) |  | **RHO: Your Coding Agent is Secretly a Roboticist** — Optimizes a multi-file policy repository before deployment, then executes it with a single inference turn. |
 | 2026.06 | UC Berkeley | [Paper](https://arxiv.org/abs/2606.19419) · [Code](https://github.com/Playful-RATs/RATs) · [Website](https://playful-rats.github.io/) | <img src="https://img.shields.io/github/stars/Playful-RATs/RATs?style=social&label=&logo=github" alt="Stars"> | 🤖 **Playful Agentic Robot Learning** — RATs discovers, repairs, verifies, and stores reusable code skills through autonomous play. |
 | 2026.06 | NVIDIA | [Paper](https://arxiv.org/abs/2607.00272) · [Website](https://research.nvidia.com/labs/gear/aspire/) |  | 🤖 **ASPIRE: Agentic Skills Discovery for Robotics** — Builds a persistent library of verified, parameterized robot-program skills from multimodal execution traces. |
-| 2026.04 | Tongji University | [Paper](https://arxiv.org/abs/2604.04664) · [Code](https://github.com/ros-claw/rosclaw) · [Website](https://www.rosclaw.io/) | <img src="https://img.shields.io/github/stars/ros-claw/rosclaw?style=social&label=&logo=github" alt="Stars"> | 🤖 **ROSClaw: A Hierarchical Semantic-Physical Framework for Heterogeneous Multi-Agent Collaboration** — Generates SDK-level control programs and multi-robot choreography, validates them with e-URDF constraints in Isaac Lab, and deploys them on heterogeneous physical robots. |
 | 2026.03 | NVIDIA | [Paper](https://arxiv.org/abs/2603.22435) · [Code](https://github.com/capgym/cap-x) · [Website](https://capgym.github.io/) | <img src="https://img.shields.io/github/stars/capgym/cap-x?style=social&label=&logo=github" alt="Stars"> | 🤖 **CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation** — Provides CaP-Gym with 187 tasks and CaP-Bench across 12 models, with simulation and real-robot evaluations. |
 | 2026.03 | General Bionix | [Paper](https://arxiv.org/abs/2603.04466) |  | **Act-Observe-Rewrite: Multimodal Coding Agents as In-Context Policy Learners for Robot Manipulation** — Rewrites a low-level Python controller between episodes using RGB-D observations and rollout diagnostics. |
-| 2026.01 | Technology Innovation Institute | [Paper](https://arxiv.org/abs/2601.19510) |  | **ALRM: Agentic LLM for Robotic Manipulation** — Benchmarks Code-as-Policy and ReAct-style tool policies across 56 simulated manipulation tasks. |
 | 2026 | Telekinesis | [Docs](https://docs.telekinesis.ai/agents/introduction.html) |  | **Telekinesis Physical AI Agents** — Documents reviewable Python robot programs built over a typed skill library. |
 | 2025.10 | Sungkyunkwan University | [Paper](https://arxiv.org/abs/2510.21302) |  | 🤖 **Towards Reliable Code-as-Policies: A Neuro-Symbolic Framework for Embodied Task Planning** — Combines active information gathering with symbolic verification for generated task programs. · *NeurIPS 2025* |
 | 2025.09 | Technical University of Munich | [Paper](https://arxiv.org/abs/2509.18597) |  | 🤖 **Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills** — Turns human language corrections into reusable code skills for long-horizon manipulation. |
@@ -105,7 +101,6 @@ Code as Policy studies agent-authored executable behavior. The generated or revi
 | 2025.03 | Westlake University | [Paper](https://arxiv.org/abs/2503.23875) · [Code](https://github.com/WindyLab/GenSwarm) | <img src="https://img.shields.io/github/stars/WindyLab/GenSwarm?style=social&label=&logo=github" alt="Stars"> | 🤖 **GenSwarm: Scalable Multi-Robot Code-Policy Generation and Deployment via Language Models** — Generates and validates multi-robot code policies and reusable skill graphs. · *npj Robotics* |
 | 2025.03 | Technical University of Munich | [Paper](https://arxiv.org/abs/2503.21969) · [Code](https://github.com/Ghiara/DAHLIA) · [Website](https://ghiara.github.io/DAHLIA/) | <img src="https://img.shields.io/github/stars/Ghiara/DAHLIA?style=social&label=&logo=github" alt="Stars"> | 🤖 **Embodied Long Horizon Manipulation with Closed-loop Code Generation and Incremental Few-shot Adaptation** — DAHLIA uses RGB-D execution reports to replan long-horizon manipulation code and grow few-shot memory. |
 | 2025.01 | Institute of Computing Technology, CAS | [Paper](https://arxiv.org/abs/2501.04268) · [Website](https://video2code.github.io/RoboPro-website/) |  | 🤖 **Robotic Programmer: Video Instructed Policy Code Generation for Robotic Manipulation** — Trains a policy-code generator on 115K Video2Code examples; a data ablation shows large gains on RLBench and LIBERO before real-robot evaluation. |
-| 2024.06 | CUHK | [Paper](https://arxiv.org/abs/2406.03757) |  | **RoboCoder: Robotic Learning from Basic Skills to General Tasks with Large Language Models** — Refines action code from environment feedback across 80 simulated tasks. |
 | 2024.04 | Intrinsic | [Paper](https://arxiv.org/abs/2404.06645) · [Website](https://dex-code-gen.github.io/dex-code-gen/) |  | 🤖 **GenCHiP: Generating Robot Policy Code for High-Precision and Contact-Rich Manipulation Tasks** — Generates policy code over compliant motion primitives for precise, contact-rich manipulation. · *IROS 2024* |
 | 2024.02 | Shanghai AI Laboratory | [Paper](https://arxiv.org/abs/2402.14623) |  | 🤖 **RoboScript: Code Generation for Free-Form Manipulation Tasks across Real and Simulation** — Adds ROS/Gazebo validation and unified simulation-to-real interfaces for generated manipulation code. |
 | 2024.02 | HKU | [Paper](https://arxiv.org/abs/2402.16117) · [Code](https://github.com/RoboCodeX-source/RoboCodeX_code) | <img src="https://img.shields.io/github/stars/RoboCodeX-source/RoboCodeX_code?style=social&label=&logo=github" alt="Stars"> | 🤖 **RoboCodeX: Multimodal Code Generation for Robotic Behavior Synthesis** — Generates tree-structured, object-centric behavior code from multimodal observations and instructions. · *ICML 2024* |
@@ -114,23 +109,40 @@ Code as Policy studies agent-authored executable behavior. The generated or revi
 
 ---
 
-## 🕹️ Embodied Agent Harness
+## 🕹️ Robot-Use Agents
 
-Embodied Agent Harness studies the runtime around robot capabilities as the main research object. Such systems expose perception, planning, control, skills, and learned policies through explicit interfaces; maintain observations, context, or memory across execution; and govern when the agent advances, retries, recovers, switches policies, or adapts. Code generation is optional.
+This topic studies how general-purpose LLM/VLM agents operate robots through control interfaces, tools, skills, and learned policies. It includes studies of agent capabilities and action interfaces, as well as the embodied harnesses that support observation, execution, verification, recovery, and adaptation.
 
 | Date | Org | Links | ⭐ | Title / Notes |
 | :---: | :---: | :---: | :---: | :--- |
+| 2026.09 | National University of Singapore | [Paper](https://arxiv.org/abs/2609.10522) · [Code](https://github.com/showlab/Show-Harness) · [Website](https://showlab.github.io/Show-Harness/) | <img src="https://img.shields.io/github/stars/showlab/Show-Harness?style=social&label=&logo=github" alt="Stars"> | 🤖 **Show-Harness: Just a VLM Agent Can Play Robots** — VLM agents select bounded semantic motion and gripper actions through embodiment interpreters, with closed-loop manipulation evaluated on Franka and AgileX robots. |
+| 2026.09 | RoboCurve | [Post](https://openai.robocurve.org/gpt-6-astra/) |  | 🤖 **GPT-6 Astra on robotic manipulation** — Third-party evaluation of camera-guided agents issuing end-effector commands on YAM arms reports 19/20 block placements and 2/20 puzzle insertions for Astra, with public trial logs. |
 | 2026.08 | University of Southern California | [Paper](https://arxiv.org/abs/2608.16889) |  | **Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory** — Uses transition-aware memory within and across subtasks to efficiently explore long-horizon tasks with a coding-agent harness over a VLA. |
 | 2026.08 | Eastern Institute of Technology, Ningbo | [Paper](https://arxiv.org/abs/2608.11246) · [Code](https://github.com/EIT-HAI/Thea) · [Website](https://eit-hai.github.io/thea/) | <img src="https://img.shields.io/github/stars/EIT-HAI/Thea?style=social&label=&logo=github" alt="Stars"> | 🤖 **Towards the Harness of Embodied Agents** — Thea exposes robot capabilities as callable tools and adds persistent scene context, memory, and evaluation exit codes for closed-loop long-horizon execution. |
 | 2026.08 | Tsinghua AIR | [Paper](https://arxiv.org/abs/2608.16590) · [Code](https://github.com/air-embodied-brain/Zetta-Embodiment) · [Website](https://air-embodied-brain.github.io/zetta/) | <img src="https://img.shields.io/github/stars/air-embodied-brain/Zetta-Embodiment?style=social&label=&logo=github" alt="Stars"> | **Zetta ζ: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence** — Evolves code-based runtime critics and recovery skills around a frozen policy through action-, rollout-, and validation-gated loops. |
 | 2026.08 | Microsoft Research Asia | [Paper](https://arxiv.org/abs/2608.11350) |  | **Self-Evolving Embodied Agents via Skill-Harness Evolution** — SHAPER jointly evolves reusable textual skills and a Python context-code harness from target-environment rollouts while planner and executor weights remain frozen. |
+| 2026.08 | Shanghai Innovation Institute | [Paper](https://arxiv.org/abs/2608.03924) · [Code](https://github.com/OpenMOSS/OpenETA) · [Website](https://openmoss.ai/OpenETA/) | <img src="https://img.shields.io/github/stars/OpenMOSS/OpenETA?style=social&label=&logo=github" alt="Stars"> | **ETA: A New Agentic Paradigm for Embodied Tasks** — OpenETA separates planning, tool execution, and fresh observations in a Planner–Interface–World loop; quantitative evaluation is simulated, with qualitative UR5e integration runs. |
+| 2026.07 | Anthropic | [Post](https://www.anthropic.com/research/claude-plays-robotics) |  | 🤖 **Claude Plays Robotics** — Benchmarks LLM-written Python controllers against direct control, RL-trained policies, and pretrained-policy interfaces across classic control and legged robots. |
 | 2026.07 | Tsinghua University | [Paper](https://arxiv.org/abs/2607.08448) · [Code](https://github.com/RLinf/RPent) · [Website](https://harnessvla.github.io/) | <img src="https://img.shields.io/github/stars/RLinf/RPent?style=social&label=&logo=github" alt="Stars"> | **Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents** — Uses planning and persistent memory to stage and retry a frozen VLA while analytic primitives handle grounding and transport. |
 | 2026.07 | SimpleAI | [Paper](https://arxiv.org/abs/2607.06256) |  | **Diagnosing Semantic Handoff Failures in Agent-Orchestrated Vision-Language-Action Skill Composition** — Gives VLA skills typed contracts and handoff-aware postconditions within a plan–act–verify–replan loop for trace-backed failure diagnosis. |
+| 2026.07 | Stanford University | [Paper](https://arxiv.org/abs/2607.11119) · [Code](https://github.com/hengyuan-hu/via) | <img src="https://img.shields.io/github/stars/hengyuan-hu/via?style=social&label=&logo=github" alt="Stars"> | **VIA: Visual Interface Agent for Robot Control** — Off-the-shelf visual agents operate a browser-based 3-D robot interface through screenshots and gripper waypoints, evaluated on six simulated manipulation tasks. |
+| 2026.07 | Huawei Noah’s Ark Lab | [Paper](https://arxiv.org/abs/2607.18060) · [Website](https://www.robo-harness.com/) |  | 🤖 **RoboHarness: Memory-Driven Orchestration of Heterogeneous Robot Policies for Long-Horizon Planning** — A coding-agent planner routes heterogeneous VLA, RL, and TAMP skills and uses memory-guided handoff motions, evaluated in simulation and on a UR5e. |
+| 2026.07 | Google DeepMind | [Post](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/) |  | 🤖 **Gemini Robotics ER 2** — A high-level embodied reasoning model orchestrates robot tools and lower-level policies; Google reports real-robot and simulated evaluations alongside deployment demonstrations. |
+| 2026.07 | Princeton University | [Paper](https://arxiv.org/abs/2607.21725) · [Code](https://github.com/lianegalanti/Pigey) · [Website](https://lianegalanti.github.io/Pigey/) | <img src="https://img.shields.io/github/stars/lianegalanti/Pigey?style=social&label=&logo=github" alt="Stars"> | 🤖 **Addressing the Orchestration Gap in Generalist Robots via Physical Agency** — Pigey orchestrates frozen motor skills with visual verification and replanning, evaluated in LIBERO-PRO and on real Franka robots. |
+| 2026.07 | X-Era Lab | [Paper](https://arxiv.org/abs/2607.16636) · [Code](https://github.com/PhyAgentOS/PhyAgentOS-core) · [Website](https://phy-agent-os.net/) | <img src="https://img.shields.io/github/stars/PhyAgentOS/PhyAgentOS-core?style=social&label=&logo=github" alt="Stars"> | **PhyAgentOS: A Self-Evolving Operating System for Embodied Agents with Decoupled Cognitive Planning and Physical Execution** — Separates cognitive planning from physical execution with tool/session interfaces, verification, memory, and safety checks; reports simulation and hardware-integration tests. |
 | 2026.06 | University of Maryland | [Paper](https://arxiv.org/abs/2606.18363) · [Website](https://guava-harness.github.io/) |  | 🤖 **Guava: An Effective and Universal Harness for Embodied Manipulation** — Studies iterative perception–reasoning–action, semantic tool abstractions, and multimodal observations as model-agnostic manipulation interfaces. |
+| 2026.06 | Google DeepMind | [Paper](https://arxiv.org/abs/2606.10267) · [Website](https://jiahenghu.github.io/hi-vla/) |  | 🤖 **What Matters in Orchestrating Robot Policies: A Systematic Study of Hierarchical VLA Agents** — Studies how model backbones, skill termination, observations, and memory affect VLM–VLA orchestration, with simulation and real ALOHA evaluations. |
 | 2026.05 | Shanghai Jiao Tong University | [Paper](https://arxiv.org/abs/2605.13119) |  | **Towards Long-horizon Embodied Agents with Tool-Aligned Vision-Language-Action Models** — Treats bounded VLA subtasks as typed tools with progress feedback so a VLM planner can trigger event-driven replanning and recovery. |
+| 2026.05 | Huazhong University of Science and Technology | [Paper](https://arxiv.org/abs/2605.26637) · [Website](https://racingemperor.github.io/manip-tool-hub/) |  | 🤖 **Enabling Extensible Embodied Capabilities with Tools** — Embodied Tool Protocol (ETP) supports tool registration, discovery, and invocation for robot task execution, evaluated in simulation and on three real-world tabletop tasks. |
+| 2026.04 | Tongji University | [Paper](https://arxiv.org/abs/2604.04664) · [Code](https://github.com/ros-claw/rosclaw) · [Website](https://www.rosclaw.io/) | <img src="https://img.shields.io/github/stars/ros-claw/rosclaw?style=social&label=&logo=github" alt="Stars"> | 🤖 **ROSClaw: A Hierarchical Semantic-Physical Framework for Heterogeneous Multi-Agent Collaboration** — Generates SDK-level control programs and multi-robot choreography, validates them with e-URDF constraints in Isaac Lab, and deploys them on heterogeneous physical robots. |
 | 2026.04 | BUPT | [Paper](https://arxiv.org/abs/2604.13942) |  | **Goal2Skill: Long-Horizon Manipulation with Adaptive Planning and Reflection** — Connects a memory-bearing VLM planner to a VLA executor through outcome verification, reflection, and online recovery. |
+| 2026.04 | Innate | [Docs](https://docs.innate.bot/software/agent) · [Code](https://github.com/innate-inc/innate-os) · [Website](https://innate.bot/) | <img src="https://img.shields.io/github/stars/innate-inc/innate-os?style=social&label=&logo=github" alt="Stars"> | **Innate OS** — Open-source robot runtime that combines recurring observations, input events, and skill feedback in a stateful agent loop with interruptible skill execution; released for MARS and its simulator. |
 | 2026.03 | AgiBot | [Paper](https://arxiv.org/abs/2603.11558) · [Code](https://github.com/RoboClaw-Robotics/RoboClaw) · [Website](https://roboclaw-agibot.github.io/) | <img src="https://img.shields.io/github/stars/RoboClaw-Robotics/RoboClaw?style=social&label=&logo=github" alt="Stars"> | 🤖 **RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks** — Uses one VLM-driven lifecycle loop for data collection, policy learning, deployment, memory, recovery, and self-resetting action pairs. |
+| 2026.01 | Technology Innovation Institute | [Paper](https://arxiv.org/abs/2601.19510) |  | **ALRM: Agentic LLM for Robotic Manipulation** — Benchmarks Code-as-Policy and ReAct-style tool policies across 56 simulated manipulation tasks. |
 | 2025.03 | Peking University | [Paper](https://arxiv.org/abs/2503.12533) · [Code](https://github.com/BeingBeyond/being-0) · [Website](https://beingbeyond.github.io/Being-0/) | <img src="https://img.shields.io/github/stars/BeingBeyond/being-0?style=social&label=&logo=github" alt="Stars"> | 🤖 **Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills** — Inserts a lightweight VLM connector between a foundation-model planner and modular skills to ground plans, coordinate transitions, and close the real-time execution loop. |
+| 2025.02 | Physical Intelligence | [Paper](https://arxiv.org/abs/2502.19417) · [Website](https://www.pi.website/research/hirobot) |  | 🤖 **Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models** — A high-level VLM interprets open-ended instructions and human feedback and directs a lower-level VLA, evaluated on three physical robot platforms. |
+
+**Further reading:** [Post](https://web.mit.edu/phillipi/www/writing/robot-use-agents.html) — **Robot-Use Agents**, Phillip Isola · 2026.09. A perspective on general-purpose agents using robot sensor and actuator APIs, including deployment, latency, and reliability.
 
 ---
 
@@ -253,6 +265,7 @@ The agent runs the outer research loop: designing experiments, modifying trainin
 
 | Date | Org | Links | ⭐ | Title / Notes |
 | :---: | :---: | :---: | :---: | :--- |
+| 2026.09 | General Robotics | [Post](https://www.generalrobotics.company/post/introducing-auto-engineering-for-robotics) |  | **GRID Auto-Engineering** — Company case study of agents iterating on robotics code, simulation, and hardware integration from execution feedback, including a physical manipulation workflow. |
 | 2026.06 | NVIDIA | [Paper](https://arxiv.org/abs/2606.19980) · [Website](https://research.nvidia.com/labs/gear/enpire/) |  | 🤖 **ENPIRE: Agentic Robot Policy Self-Improvement in the Real World** — Coding agents revise policy and training code from physical rollout logs; fleet branches accelerate pin-insertion learning and transfer a RoboCasa tool-use strategy to hardware. |
 | 2026.03 | IIT Kanpur | [Paper](https://arxiv.org/abs/2603.27416) |  | **Agent-Driven Autonomous Reinforcement Learning Research: Iterative Policy Improvement for Quadruped Locomotion** — With human-set high-level directions, an agent edits rewards, terrains, and training configurations across 14 waves and more than 70 Isaac Lab experiments. |
 
