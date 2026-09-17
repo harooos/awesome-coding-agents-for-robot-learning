@@ -10,9 +10,9 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
-  <img src="https://img.shields.io/badge/Works-98-168B8F?style=flat-square" alt="98 works">
-  <img src="https://img.shields.io/badge/Open_source-51-168B8F?style=flat-square" alt="51 open-source works">
-  <img src="https://img.shields.io/badge/Real_robot-55-6C63D8?style=flat-square" alt="55 works with real-robot evaluation">
+  <img src="https://img.shields.io/badge/Works-100-168B8F?style=flat-square" alt="100 works">
+  <img src="https://img.shields.io/badge/Open_source-52-168B8F?style=flat-square" alt="52 open-source works">
+  <img src="https://img.shields.io/badge/Real_robot-56-6C63D8?style=flat-square" alt="56 works with real-robot evaluation">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-536270?style=flat-square" alt="MIT License"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-168B8F?style=flat-square" alt="PRs welcome"></a>
 </p>
@@ -40,7 +40,7 @@ The seven topics below are named after their primary research object. Each work 
 **Taxonomy**
 
 - **💻 [Code as Policy](#-code-as-policy)** — agent-authored executable behavior is the deployed policy · `20 works`
-- **🕹️ [Robot-Use Agents](#-robot-use-agents)** — agents observe, act, and adapt through robot interfaces, tools, skills, and policies · `26 works`
+- **🕹️ [Robot-Use Agents](#-robot-use-agents)** — agents observe, act, and adapt through robot interfaces, tools, skills, and policies · `28 works`
 - **🏠 [Environments and Tasks](#-environments-and-tasks)** — generated code or structured artifacts define the world, task, or curriculum · `27 works`
 - **🎯 [Reward Design](#-reward-design)** — agent-authored executable logic supplies the policy-training objective · `23 works`
 - **📝 [Policy Evaluation](#-policy-evaluation)** — agent-authored tasks, scenarios, or judges measure existing and held-out robot policies · `5 works`
@@ -56,7 +56,7 @@ The seven topics below are named after their primary research object. Each work 
 Topic fit, evidence rigor, and source genre are reviewed separately. A paper, technical report, research post, or released system may be included when it is clearly topical; its row should state only what the source supports.
 
 - 🤖 physical-robot evaluation · `[Code]` official public implementation · ⚠️ curated from primary sources with coding agents, then human-reviewed. Corrections are welcome.
-- 📅 Last updated: 2026-09-14
+- 📅 Last updated: 2026-09-17
 
 <details>
 <summary>📋 <b>Scope</b> — the two inclusion pathways and deliberate exclusions</summary>
@@ -115,6 +115,8 @@ This topic studies how general-purpose LLM/VLM agents operate robots through con
 
 | Date | Org | Links | ⭐ | Title / Notes |
 | :---: | :---: | :---: | :---: | :--- |
+| 2026.09 | RoboDojo Team | [Post](https://robodojo-benchmark.com/report/gpt-6-astra-eval) |  | 🤖 **An Unexpected Robot Policy: Early Evaluations of GPT-6 Astra on RoboDojo and Beyond** — Evaluates LLM-driven control through a fixed, non-learned RoboProbe harness on 42 simulated tasks, with diagnostic real-robot trials halted for safety. |
+| 2026.09 | Galbot | [Post](https://anonymous-report-421.github.io/public-website/) · [Code](https://github.com/anonymous-report-421/GPT-as-Policy) | <img src="https://img.shields.io/github/stars/anonymous-report-421/GPT-as-Policy?style=social&label=&logo=github" alt="Stars"> | **GPT 6 Astra as an Embodied Policy** — Compares camera-guided direct end-effector control with π0.5 proposal review and correction on paired RoboDojo simulation trials, with an additional RoboLab simulation study. |
 | 2026.09 | National University of Singapore | [Paper](https://arxiv.org/abs/2609.10522) · [Code](https://github.com/showlab/Show-Harness) · [Website](https://showlab.github.io/Show-Harness/) | <img src="https://img.shields.io/github/stars/showlab/Show-Harness?style=social&label=&logo=github" alt="Stars"> | 🤖 **Show-Harness: Just a VLM Agent Can Play Robots** — VLM agents select bounded semantic motion and gripper actions through embodiment interpreters, with closed-loop manipulation evaluated on Franka and AgileX robots. |
 | 2026.09 | RoboCurve | [Post](https://openai.robocurve.org/gpt-6-astra/) |  | 🤖 **GPT-6 Astra on robotic manipulation** — Third-party evaluation of camera-guided agents issuing end-effector commands on YAM arms reports 19/20 block placements and 2/20 puzzle insertions for Astra, with public trial logs. |
 | 2026.08 | University of Southern California | [Paper](https://arxiv.org/abs/2608.16889) |  | **Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory** — Uses transition-aware memory within and across subtasks to efficiently explore long-horizon tasks with a coding-agent harness over a VLA. |
@@ -142,7 +144,10 @@ This topic studies how general-purpose LLM/VLM agents operate robots through con
 | 2025.03 | Peking University | [Paper](https://arxiv.org/abs/2503.12533) · [Code](https://github.com/BeingBeyond/being-0) · [Website](https://beingbeyond.github.io/Being-0/) | <img src="https://img.shields.io/github/stars/BeingBeyond/being-0?style=social&label=&logo=github" alt="Stars"> | 🤖 **Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills** — Inserts a lightweight VLM connector between a foundation-model planner and modular skills to ground plans, coordinate transitions, and close the real-time execution loop. |
 | 2025.02 | Physical Intelligence | [Paper](https://arxiv.org/abs/2502.19417) · [Website](https://www.pi.website/research/hirobot) |  | 🤖 **Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models** — A high-level VLM interprets open-ended instructions and human feedback and directs a lower-level VLA, evaluated on three physical robot platforms. |
 
-**Further reading:** [Post](https://web.mit.edu/phillipi/www/writing/robot-use-agents.html) — **Robot-Use Agents**, Phillip Isola · 2026.09. A perspective on general-purpose agents using robot sensor and actuator APIs, including deployment, latency, and reliability.
+**Related**
+
+- [Post](https://web.mit.edu/phillipi/www/writing/robot-use-agents.html) — **Robot-Use Agents**, Phillip Isola · 2026.09. A perspective on general-purpose agents using robot sensor and actuator APIs, including deployment, latency, and reliability.
+- [Awesome-Astra-Embodied-AI](https://github.com/zjwzcx/Awesome-Astra-Embodied-AI) — Community collection of GPT-6 Astra robotics demonstrations and workflows, including robot control, policy calls, simulation reconstruction, and RL training.
 
 ---
 
