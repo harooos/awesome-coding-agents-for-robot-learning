@@ -10,8 +10,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
-  <img src="https://img.shields.io/badge/Works-100-168B8F?style=flat-square" alt="100 works">
-  <img src="https://img.shields.io/badge/Open_source-52-168B8F?style=flat-square" alt="52 open-source works">
+  <img src="https://img.shields.io/badge/Works-101-168B8F?style=flat-square" alt="101 works">
+  <img src="https://img.shields.io/badge/Open_source-53-168B8F?style=flat-square" alt="53 open-source works">
   <img src="https://img.shields.io/badge/Real_robot-56-6C63D8?style=flat-square" alt="56 works with real-robot evaluation">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-536270?style=flat-square" alt="MIT License"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-168B8F?style=flat-square" alt="PRs welcome"></a>
@@ -40,7 +40,7 @@ The seven topics below are named after their primary research object. Each work 
 **Taxonomy**
 
 - **💻 [Code as Policy](#-code-as-policy)** — agent-authored executable behavior is the deployed policy · `20 works`
-- **🕹️ [Robot-Use Agents](#-robot-use-agents)** — agents observe, act, and adapt through robot interfaces, tools, skills, and policies · `28 works`
+- **🕹️ [Robot-Use Agents](#-robot-use-agents)** — agents observe, act, and adapt through robot interfaces, tools, skills, and policies · `29 works`
 - **🏠 [Environments and Tasks](#-environments-and-tasks)** — generated code or structured artifacts define the world, task, or curriculum · `27 works`
 - **🎯 [Reward Design](#-reward-design)** — agent-authored executable logic supplies the policy-training objective · `23 works`
 - **📝 [Policy Evaluation](#-policy-evaluation)** — agent-authored tasks, scenarios, or judges measure existing and held-out robot policies · `5 works`
@@ -56,7 +56,7 @@ The seven topics below are named after their primary research object. Each work 
 Topic fit, evidence rigor, and source genre are reviewed separately. A paper, technical report, research post, or released system may be included when it is clearly topical; its row should state only what the source supports.
 
 - 🤖 physical-robot evaluation · `[Code]` official public implementation · ⚠️ curated from primary sources with coding agents, then human-reviewed. Corrections are welcome.
-- 📅 Last updated: 2026-09-17
+- 📅 Last updated: 2026-10-13
 
 <details>
 <summary>📋 <b>Scope</b> — the two inclusion pathways and deliberate exclusions</summary>
@@ -115,6 +115,7 @@ This topic studies how general-purpose LLM/VLM agents operate robots through con
 
 | Date | Org | Links | ⭐ | Title / Notes |
 | :---: | :---: | :---: | :---: | :--- |
+| 2026.10 | Nanyang Technological University | [Paper](https://arxiv.org/abs/2610.10388) · [Code](https://github.com/declare-lab/RoboQuest) · [Website](https://declare-lab.github.io/RoboQuest/) | <img src="https://img.shields.io/github/stars/declare-lab/RoboQuest?style=social&label=&logo=github" alt="Stars"> | **RoboQuest: Generalist Physical Agents that Search, Inspect and Test** — Five frontier multimodal agents drive a simulated mobile manipulator through tool calls on ten kitchen tasks that require searching, inspecting, or testing for hidden information, with GPT-6 Astra leading at 23.2% success. |
 | 2026.09 | RoboDojo Team | [Post](https://robodojo-benchmark.com/report/gpt-6-astra-eval) |  | 🤖 **An Unexpected Robot Policy: Early Evaluations of GPT-6 Astra on RoboDojo and Beyond** — Evaluates LLM-driven control through a fixed, non-learned RoboProbe harness on 42 simulated tasks, with diagnostic real-robot trials halted for safety. |
 | 2026.09 | Galbot | [Post](https://anonymous-report-421.github.io/public-website/) · [Code](https://github.com/anonymous-report-421/GPT-as-Policy) | <img src="https://img.shields.io/github/stars/anonymous-report-421/GPT-as-Policy?style=social&label=&logo=github" alt="Stars"> | **GPT 6 Astra as an Embodied Policy** — Compares camera-guided direct end-effector control with π0.5 proposal review and correction on paired RoboDojo simulation trials, with an additional RoboLab simulation study. |
 | 2026.09 | National University of Singapore | [Paper](https://arxiv.org/abs/2609.10522) · [Code](https://github.com/showlab/Show-Harness) · [Website](https://showlab.github.io/Show-Harness/) | <img src="https://img.shields.io/github/stars/showlab/Show-Harness?style=social&label=&logo=github" alt="Stars"> | 🤖 **Show-Harness: Just a VLM Agent Can Play Robots** — VLM agents select bounded semantic motion and gripper actions through embodiment interpreters, with closed-loop manipulation evaluated on Franka and AgileX robots. |
