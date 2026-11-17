@@ -10,8 +10,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
-  <img src="https://img.shields.io/badge/Works-94-168B8F?style=flat-square" alt="94 works">
-  <img src="https://img.shields.io/badge/Open_source-58-168B8F?style=flat-square" alt="58 open-source works">
+  <img src="https://img.shields.io/badge/Works-95-168B8F?style=flat-square" alt="95 works">
+  <img src="https://img.shields.io/badge/Open_source-59-168B8F?style=flat-square" alt="59 open-source works">
   <img src="https://img.shields.io/badge/Real_robot-54-6C63D8?style=flat-square" alt="54 works with real-robot evaluation">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-536270?style=flat-square" alt="MIT License"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-168B8F?style=flat-square" alt="PRs welcome"></a>
@@ -41,7 +41,7 @@ The seven topics below are named after their primary research object. Each work 
 
 - **💻 [Code as Policy](#-code-as-policy)** — agent-authored executable behavior is the deployed policy · `18 works`
 - **🕹️ [Robot-Use Agents](#-robot-use-agents)** — agents observe, act, and adapt through robot interfaces, tools, skills, and policies · `30 works`
-- **🏠 [Environments and Tasks](#-environments-and-tasks)** — generated code or structured artifacts define the world, task, or curriculum · `25 works`
+- **🏠 [Environments and Tasks](#-environments-and-tasks)** — generated code or structured artifacts define the world, task, or curriculum · `26 works`
 - **🎯 [Reward Design](#-reward-design)** — agent-authored executable logic supplies the policy-training objective · `19 works`
 - **📝 [Policy Evaluation](#-policy-evaluation)** — agent-authored tasks, scenarios, or judges measure existing and held-out robot policies · `5 works`
 - **📚 [Synthetic Data](#-synthetic-data)** — executable data-producing artifacts are tested through downstream policy learning · `20 works`
@@ -56,7 +56,7 @@ The seven topics below are named after their primary research object. Each work 
 Topic fit, evidence rigor, and source genre are reviewed separately. A paper, technical report, research post, or released system may be included when it is clearly topical; its row should state only what the source supports.
 
 - 🤖 physical-robot evaluation · `[Code]` official public implementation · ⚠️ curated from primary sources with coding agents, then human-reviewed. Corrections are welcome.
-- 📅 Last updated: 2026-10-30
+- 📅 Last updated: 2026-11-16
 
 <details>
 <summary>📋 <b>Scope</b> — the two inclusion pathways and deliberate exclusions</summary>
@@ -157,6 +157,7 @@ The agent builds the world the policy learns or is tested in: environment or tas
 
 | Date | Org | Links | ⭐ | Title / Notes |
 | :---: | :---: | :---: | :---: | :--- |
+| 2026.11 | Argon Robotics | [Paper](https://arxiv.org/abs/2611.16312) · [Code](https://github.com/argonrobotics-ai/alloy) · [Website](https://alloy.argonrobotics.ai) | <img src="https://img.shields.io/github/stars/argonrobotics-ai/alloy?style=social&label=&logo=github" alt="Stars"> | **Alloy: A Multi-Material Physics Engine for Robot Learning** — Open-source engine whose MCP server lets coding agents build and run simulations of rigid robots, cloth, soft bodies, sand, and liquids across many parallel worlds on one GPU or a CPU. |
 | 2026.07 | Horizon Robotics | [Paper](https://arxiv.org/abs/2607.07459) · [Code](https://github.com/HorizonRobotics/EmbodiedGen) · [Website](https://horizonrobotics.github.io/EmbodiedGen/) | <img src="https://img.shields.io/github/stars/HorizonRobotics/EmbodiedGen?style=social&label=&logo=github" alt="Stars"> | 🤖 **EmbodiedGen V2: An Agentic, Simulation-Ready 3D World Engine for Embodied AI** — Compiles task language, images, and edits into physics-validated, cross-simulator worlds used for online RL and real-robot transfer. |
 | 2026.06 | NVIDIA | [Paper](https://arxiv.org/abs/2606.28276) · [Website](https://research.nvidia.com/labs/gear/simfoundry/) |  | 🤖 **SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation** — Compiles interactive real-to-sim scenes and VLM-produced task configurations; digital cousins support policy evaluation and sim-to-real training. |
 | 2026.06 | Zhejiang University | [Paper](https://arxiv.org/abs/2606.13578) · [Code](https://github.com/zjunlp/LabVLA) · [Website](https://zjunlp.github.io/LabVLA) | <img src="https://img.shields.io/github/stars/zjunlp/LabVLA?style=social&label=&logo=github" alt="Stars"> | 🤖 **LabVLA: Grounding Vision-Language-Action Models in Scientific Laboratories** — RoboGenesis generates validated workflow YAML and success-filtered laboratory demonstrations; adding them improves an external VLA under ID and OOD tests. |
