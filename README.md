@@ -10,9 +10,9 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
-  <img src="https://img.shields.io/badge/Works-94-168B8F?style=flat-square" alt="94 works">
-  <img src="https://img.shields.io/badge/Open_source-58-168B8F?style=flat-square" alt="58 open-source works">
-  <img src="https://img.shields.io/badge/Real_robot-54-6C63D8?style=flat-square" alt="54 works with real-robot evaluation">
+  <img src="https://img.shields.io/badge/Works-95-168B8F?style=flat-square" alt="95 works">
+  <img src="https://img.shields.io/badge/Open_source-59-168B8F?style=flat-square" alt="59 open-source works">
+  <img src="https://img.shields.io/badge/Real_robot-55-6C63D8?style=flat-square" alt="55 works with real-robot evaluation">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-536270?style=flat-square" alt="MIT License"></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-168B8F?style=flat-square" alt="PRs welcome"></a>
 </p>
@@ -40,7 +40,7 @@ The seven topics below are named after their primary research object. Each work 
 **Taxonomy**
 
 - **💻 [Code as Policy](#-code-as-policy)** — agent-authored executable behavior is the deployed policy · `18 works`
-- **🕹️ [Robot-Use Agents](#-robot-use-agents)** — agents observe, act, and adapt through robot interfaces, tools, skills, and policies · `30 works`
+- **🕹️ [Robot-Use Agents](#-robot-use-agents)** — agents observe, act, and adapt through robot interfaces, tools, skills, and policies · `31 works`
 - **🏠 [Environments and Tasks](#-environments-and-tasks)** — generated code or structured artifacts define the world, task, or curriculum · `25 works`
 - **🎯 [Reward Design](#-reward-design)** — agent-authored executable logic supplies the policy-training objective · `19 works`
 - **📝 [Policy Evaluation](#-policy-evaluation)** — agent-authored tasks, scenarios, or judges measure existing and held-out robot policies · `5 works`
@@ -56,7 +56,7 @@ The seven topics below are named after their primary research object. Each work 
 Topic fit, evidence rigor, and source genre are reviewed separately. A paper, technical report, research post, or released system may be included when it is clearly topical; its row should state only what the source supports.
 
 - 🤖 physical-robot evaluation · `[Code]` official public implementation · ⚠️ curated from primary sources with coding agents, then human-reviewed. Corrections are welcome.
-- 📅 Last updated: 2026-10-30
+- 📅 Last updated: 2026-11-25
 
 <details>
 <summary>📋 <b>Scope</b> — the two inclusion pathways and deliberate exclusions</summary>
@@ -113,6 +113,7 @@ This topic studies how general-purpose LLM/VLM agents operate robots through con
 
 | Date | Org | Links | ⭐ | Title / Notes |
 | :---: | :---: | :---: | :---: | :--- |
+| 2026.11 | Xi'an Jiaotong-Liverpool University | [Paper](https://arxiv.org/abs/2611.14115) · [Code](https://github.com/zhuqinfeng1999/LEASH) · [Website](https://zhuqinfeng1999.github.io/LEASH/) | <img src="https://img.shields.io/github/stars/zhuqinfeng1999/LEASH?style=social&label=&logo=github" alt="Stars"> | 🤖 **LEASH: Stay Safe in Agentic Robotics** — Adds task, action and commit safety gates to frontier-model robot harnesses and evaluates planners with RoboRisk on 92 simulated tasks and 13 tasks on a physical Dobot arm. |
 | 2026.10 | SenseNova | [Paper](https://arxiv.org/abs/2610.22471) · [Code](https://github.com/OpenSenseNova/SenseNova-RoboRSI) · [Website](https://www.sensenova.ai/has-gpt-6-astra-achieved-embodied-intelligence) | <img src="https://img.shields.io/github/stars/OpenSenseNova/SenseNova-RoboRSI?style=social&label=&logo=github" alt="Stars"> | 🤖 **Has GPT-6-Astra Achieved Embodied Intelligence?** — Studies in-context learning, action interfaces, execution budgets, and VLM–VLA coordination across 12 benchmarks and eight real-robot configurations. |
 | 2026.10 | University College London | [Paper](https://arxiv.org/abs/2610.02459) · [Code](https://github.com/terminalworld/OpenRUA) | <img src="https://img.shields.io/github/stars/terminalworld/OpenRUA?style=social&label=&logo=github" alt="Stars"> | **OpenRUA: Robot-Use Agents Are Zero-Shot Visuomotor Policies** — Gives coding agents native ROS 2 access through a workspace to build perception and control tools during execution, evaluated in simulation. |
 | 2026.09 | RoboDojo Team | [Post](https://robodojo-benchmark.com/report/gpt-6-astra-eval) |  | 🤖 **An Unexpected Robot Policy: Early Evaluations of GPT-6 Astra on RoboDojo and Beyond** — Evaluates LLM-driven control through a fixed, non-learned RoboProbe harness on 42 simulated tasks, with diagnostic real-robot trials halted for safety. |
